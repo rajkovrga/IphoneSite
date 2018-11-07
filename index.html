@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apple Home</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.ico" type="image/x-icon" />
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+   
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="element menu">
+        <div class="responsive">
+            <div class="logo"><img src="img/logo.png" alt=""> </div>
+            <div class="buttonR" data-bar="#items"><i class="fas fa-bars"></i></div>
+        </div>
+        <ul id="items" class="items d-none">
+            <li class="item logo"><img src="img/logo.png" alt=""> </li>
+            <li class="item"><a href="#onama">O nama</a></li>
+            <li class="item item2"><a href="#proizvodi">Proizvodi</a></li>
+            <li class="item item2"><a href="#servis">Servis</a></li>
+            <li class="item"><a href="#kontakt">Kontakt</a></li>
+            <li class="item"><a href="#autor">Autor</a></li>
+        </ul>
+    </div>
+    <div class="element home">
+        <div id="naslov">
+            <h1>Iphone shop</h1>
+            <h3 id="welcome"></h3>
+        </div>
+
+
+        <div id="dole">
+            <a href="#onama"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+        </div>
+
+    </div>
+
+    <div class="element onama" id="onama">
+        <h2>O nama</h2>
+        <div class="sadrzaj">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="onamaSlika">
+                <img src="img/onama.png" alt="">
+            </div>
+            <div class="onamaTekst">
+
+                <p data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Ovo je prodavnica za
+                    prodaju Iphone telefona u Beogradu, osnovana 2011 godine</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="element proizvodi" id="proizvodi">
+        <div class="naslov">
+            <h2>Proizvodi</h2>
+        </div>
+        <div class="artikli"><!-- 
+       <div class="proizvod">
+            <img src="img/ipxsmax.png" alt="">
+            <div class="naziv">
+                <p>NAZIV TELEFONA</p>
+            </div>
+            </div>
+            <div class="proizvod"><img src="img/ipxs.png" alt=""></div>
+            <div class="proizvod"><img src="img/ipx.png" alt=""></div>
+            <div class="proizvod"><img src="img/ip8plus.png" alt=""></div>
+            <div class="proizvod proizvodJos"><img src="img/ip7plus.png" alt=""></div>
+            <div class="proizvod proizvodJos"><img src="img/ip7.png" alt=""></div>
+            <div class="proizvod proizvodJos"><img src="img/ip6splus.png" alt=""></div>--> 
+        </div> 
+        <div class="dugme-jos">
+            <div class="jos">
+                <p id="p-jos">JOS</p>
+            </div>
+        </div>
+    </div>
+    <div id="slider">
+        <div class="close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div id="sliderPhoto">
+            <img src="" id="slika" alt="">
+            <div class="leftright">
+                <i class="fas button-slide fa-caret-left" aria-hidden="true"></i>
+                <i class="fas button-slide fa-caret-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="element servis" id="servis">
+        <div class="naslov">
+            <h2>
+                Servis
+            </h2>
+        </div>
+        <div class="sadrzaj-servisa">
+            <div class="slika-servisa">
+                <img src="img/alatka.png" alt="">
+            </div>
+            <div class="tekst-servisa">
+                <div id="info">
+                    <p data-aos="zoom-out-up">Servisiranje Apple uredjaja mozete obaviti u ovlascenom servisu, njih
+                        mozete kontaktirati na
+                        linku ispod</p>
+                </div>
+                <div id="info-button">
+                    <a target="_blank" href="https://www.appleservis.rs/">LINK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="element kontakt" id="kontakt">
+        <div class="naslov">
+            <h2>Kontakt</h2>
+        </div>
+        <div class="kontakt-sadrzaj">
+            <div class="forma">
+                <form action="" method="POST">
+                    <table>
+                        <tr>
+                            <td>
+                                <p>E-mail </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Naslov</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Opis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><textarea name="" id="" resize="none"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" id="posalji" value="Posalji"></td>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="element autor" id="autor">
+        <div class="naslov">
+            <h2>Autor</h2>
+        </div>
+        <div id="autorinfo">
+            <div data-aos="fade-right" id="autorslika">
+                <img src="img/autor.png" alt="">
+            </div>
+            <div data-aos="fade-left" id="autortekst">
+
+                <div id="mojopis">
+                    <p>Moje ime je <label> Rajko Vrga </label> i student sam druge godine Visoke ICT</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="element copy">
+        <div class="drustvene">
+            <a target="blank_" class="fab fa-instagram" href="https://www.instagram.com/?hl=sr"></a>
+            <a target="blank_" class="fas fa-sitemap" href="sitemap.xml"></a>
+            <a target="blank_" class="fab fa-facebook-f" href="http://www.facebook.com"> </a>
+            <a target="blank_" class="fab fa-twitter" href="http://www.twitter.com"></a>
+
+        </div>
+        <div class="dokumentacija"><a href="">Dokumentacija</a></div>
+        <div class="copytekst">
+            <p> &copy; Copyright</p>
+        </div>
+    </div>
+
+    <div id="top">
+        <a href="#" target="_top"> <i class="fa fa-arrow-up"></i></a>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script>
+            
+    
+        </script>
+    <script src="function/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>

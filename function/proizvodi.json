@@ -1,0 +1,59 @@
+{
+  "proizvodi": [
+    {
+      "model": "Apple iPhone XS Max",
+      "boja": "pink",
+      "slika": "ipxsmax.png",
+      "cena": "1259€"
+    },
+
+    {
+      "model": "Apple iPhone XS",
+      "boja": "pink",
+      "slika": "ipxs.png",
+      "cena": "1100€"
+    },
+
+    {
+      "model": "Apple iPhone X",
+      "boja": "bela",
+      "slika": "ipx.png",
+      "cena": "800€"
+    },
+
+    {
+      "model": "Apple iPhone 8plus",
+      "boja": "crna",
+      "slika": "ip8plus.png",
+      "cena": "698€"
+    },
+
+    {
+      "model": "Apple iPhone 8",
+      "boja": "bela",
+      "slika": "ip8.png",
+      "cena": "700€"
+    },
+
+    {
+      "model": "Apple iPhone 7 plus",
+      "boja": "pink",
+      "slika": "ip7plus.png",
+      "cena": "640€"
+    },
+
+    {
+      "model": "Apple iPhone 7",
+      "boja": "crna",
+      "slika": "ip7.png",
+      "cena": "580€"
+    },
+
+    {
+      "model": "Apple iPhone 6s plus",
+      "boja": "bela",
+      "slika": "ip6splus.png",
+      "cena": "500€"
+    }
+  ]
+}

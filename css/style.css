@@ -1,0 +1,786 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#JOSID {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  background: red;
+  z-index: 200;
+}
+.element {
+  width: 100%;
+}
+#top {
+  width: 53px;
+  height: 53px;
+  background: rgba(107, 100, 100, 0.705);
+
+  position: fixed;
+  bottom: 24px;
+  right: 35px;
+  font-size: 2.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top a {
+  color: rgba(20, 19, 19, 0.911);
+}
+
+#slider {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.507);
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 200;
+  flex-direction: column;
+}
+#sliderPhoto {
+  width: 325px;
+  height: 325px;
+  background: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2em;
+  position: relative;
+}
+#sliderPhoto img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#slider .close {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: 50;
+  right: 50px;
+  top: 104px;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+#slider .close i {
+  color: white;
+  font-size: 3.5em;
+}
+#sliderPhoto .leftright {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+#sliderPhoto .leftright fa {
+  padding: 8px;
+}
+
+.naslov {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  align-items: center;
+}
+.naslov h2 {
+  width: auto;
+  height: auto;
+  background: rgba(212, 204, 204, 0.596);
+  padding: 17px 20px;
+  padding-bottom: -20px;
+  text-align: center;
+}
+
+/* menu ///////////////////////////////////////////////////////////// */
+
+.element.menu {
+  position: sticky;
+  z-index: 50;
+  top: 0;
+  height: 80px;
+  background: rgb(20, 20, 20);
+  width: 100%;
+  color: white;
+}
+.element.menu .responsive {
+  width: inherit;
+  height: 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  font-size: 1.4em;
+}
+.element.menu .responsive .logo {
+  width: 35px;
+  height: 35px;
+}
+.element.menu .responsive .logo img {
+  width: 100%;
+  height: 100%;
+}
+.element.menu .items {
+  width: inherit;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.element.menu .items .logo {
+  width: 35px;
+  height: 35px;
+}
+.element.menu .items .logo img {
+  width: 100%;
+  height: 100%;
+}
+.element.menu .items .item a {
+  color: white;
+
+  padding: 8px 15px;
+}
+.element.menu .items .item a:hover {
+  transition: 0.6s;
+  background: rgb(107, 101, 101);
+}
+/* home ///////////////////////////////////////////////////////////// */
+
+.element.home {
+  height: 500px;
+  position: relative;
+  background: url("../img/homebg.png") no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: rgb(248, 248, 248);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.4em;
+  align-items: center;
+  justify-content: center;
+}
+.element.home #naslov {
+  padding: 14px 50px;
+  position: absolute;
+  top: 85px;
+  background: rgba(85, 82, 82, 0.514);
+}
+.element.home #naslov h1 {
+  padding: 10px 0px;
+}
+.element.home #dole {
+  width: 100px;
+  font-size: 1.8em;
+  padding: 10px 0px;
+  background: rgba(201, 197, 191, 0.747);
+  position: absolute;
+  bottom: 32px;
+}
+.element.home #dole:hover {
+  background: rgba(201, 197, 191, 0.932);
+  transition: 0.6s;
+}
+.element.home #dole a {
+  color: black;
+  font-size: 1.2em;
+}
+
+/* onama ///////////////////////////////////////////////////////// */
+
+.element.onama {
+  min-height: 540px;
+  position: relative;
+  background: rgb(226, 226, 226);
+  text-align: center;
+  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+}
+.element.onama h2 {
+  padding-top: 90px;
+  width: 100%;
+}
+
+.element.onama .sadrzaj {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.element.onama .sadrzaj .onamaSlika {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  padding-left: 50px;
+}
+.element.onama .sadrzaj .onamaSlika img {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  height: 90%;
+}
+
+.element.onama .sadrzaj .onamaTekst {
+  display: flex;
+  width: 34%;
+  height: 300px;
+  align-items: center;
+  text-align: center;
+}
+
+/* proizvodi  /////////////////////////////////////////////////////////////*/
+
+.element.proizvodi {
+  height: auto !important;
+  text-align: center;
+  background: url("../img/proizvodi2.png");
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  background-attachment: fixed;
+  padding-top: 85px;
+}
+
+.proizvod img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+
+  /*animation: proizvod 2s ease-in-out;*/
+}
+
+.proizvodJos img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  margin: 0 auto;
+  animation: proizvod 1.4s ease-in-out;
+}
+
+.element.proizvodi .artikli {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  padding-top: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 48px;
+}
+
+.element.proizvodi .artikli .proizvod {
+  width: 21%;
+  height: 290px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+  margin-bottom: 15px;
+}
+.element.proizvodi .artikli .proizvod .naziv {
+  background: rgb(95, 89, 89);
+  color: white;
+  text-transform: uppercase;
+  padding: 13px 0px;
+}
+.element.proizvodi .artikli-ostali {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  justify-content: space-around;
+}
+.element.proizvodi .artikli-ostali .proizvod {
+  width: 20%;
+  height: 290px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.a-none {
+  display: none !important;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.a-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.dugme-jos {
+  width: 100%;
+  position: relative;
+  margin-top: 56px;
+  display: flex;
+
+  justify-content: center;
+  height: 30px;
+  top: 0px;
+  text-align: center;
+}
+.dugme-jos .jos {
+  height: 30px;
+  width: auto;
+  align-items: center;
+  position: relative;
+  padding: 17px 40px;
+  padding-bottom: 30px;
+  bottom: 0;
+  background: rgb(53, 53, 53);
+}
+.dugme-jos .jos:hover {
+  background: rgb(85, 83, 83);
+  transition: 0.6s;
+}
+.dugme-jos .jos p {
+  color: white;
+}
+
+/* kontakt /////////////////////////////////////////////////////////////*/
+
+.element.kontakt {
+  min-height: 480px;
+  display: flex;
+  justify-content: center;
+  background: url("../img/kontakt.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  flex-wrap: wrap;
+  padding-top: 85px;
+  padding-bottom: 30px;
+}
+
+.element.kontakt .kontakt-sadrzaj {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.element.kontakt .kontakt-sadrzaj .forma {
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.295);
+}
+.element.kontakt .kontakt-sadrzaj .forma form {
+  width: 100%;
+}
+.element.kontakt .kontakt-sadrzaj .forma form table {
+  width: 100%;
+}
+.element.kontakt .kontakt-sadrzaj .forma form table tr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.element.kontakt .kontakt-sadrzaj .forma form table tr td {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  padding: 6px 0px;
+}
+.element.kontakt .kontakt-sadrzaj .forma form table tr td p {
+  font-size: 1.7em;
+  color: black;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  background: rgb(247, 233, 233);
+  resize: none;
+  width: auto;
+  border: none;
+  width: 90%;
+  padding: 2px 0px;
+  cursor: pointer;
+  border: 2px solid rgb(95, 94, 94);
+}
+input[type="text"] {
+  padding: 10px 9px;
+}
+textarea {
+  height: 108px;
+  padding: 11px 9px;
+  width: 90%;
+}
+#posalji {
+  width: 60%;
+  border: none;
+  padding: 15px 0px;
+  margin-top: 15px;
+  background: rgb(51, 51, 51);
+  color: white;
+}
+#posalji:hover {
+  background: rgb(90, 88, 88);
+  transition: 0.8s;
+}
+input[type="text"]:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+  border: 3px solid rgb(20, 20, 20);
+  transition: 0.6s;
+}
+/* servis /////////////////////////////////////////////////////////////*/
+
+.element.servis {
+  min-height: 450px;
+  background: rgb(244, 244, 255);
+  padding-bottom: 75px;
+}
+.element.servis .sadrzaj-servisa {
+  position: relative;
+  top: 25px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.element.servis .naslov {
+  padding-top: 130px;
+}
+.element.servis .sadrzaj-servisa .slika-servisa {
+  width: 300px;
+  height: 250px;
+  padding-bottom: 50px;
+}
+.element.servis .sadrzaj-servisa .slika-servisa img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+.element.servis .tekst-servisa {
+  width: 100%;
+  height: 270px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.element.servis .tekst-servisa #info {
+  display: flex;
+  justify-content: center;
+  width: 74%;
+  height: auto;
+  text-align: center;
+  font-size: 1.7em;
+}
+.element.servis .tekst-servisa #info-button {
+  width: auto;
+  height: auto;
+  padding: 10px 32px;
+  background: rgb(53, 53, 53);
+  color: white;
+}
+.element.servis .tekst-servisa #info-button:hover {
+  background: rgb(85, 83, 83);
+  transition: 0.6s;
+}
+.element.servis .tekst-servisa #info-button a {
+  color: white;
+}
+
+/* autor  ////////////////////////////////////////////////////////////////////////////////*/
+
+.element.autor {
+  min-height: 450px;
+  background: rgb(226, 226, 226);
+}
+
+.element.autor .naslov {
+  padding-top: 17px;
+}
+.element.autor #autorinfo {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.element.autor #autorinfo #autorslika {
+  width: 180px;
+  height: 180px;
+  z-index: 10;
+  position: relative;
+  left: 25px;
+  border-radius: 50%;
+  border: 6px solid rgba(14, 11, 11, 0.76);
+}
+.element.autor #autorinfo #autorslika img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.element.autor #autorinfo #autortekst {
+  width: 350px;
+  height: 130px;
+  background: rgb(165, 172, 166);
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 5px;
+  right: 3px;
+}
+.element.autor #autorinfo #autortekst #mojopis {
+  width: 91%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  float: right;
+}
+.element.autor #autorinfo #autortekst #mojopis p label {
+  font-weight: bolder;
+}
+
+/* copy //////////////////////////////////////////////////////////////////////////*/
+
+.element.copy {
+  min-height: 36px;
+  background: rgb(173, 173, 177);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+}
+.element.copy .drustvene {
+  width: 180px;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.element.copy .drustvene a {
+  color: white;
+  padding: 6px;
+}
+.element.copy .drustvene a:hover {
+  color: black;
+  transition: 0.8s;
+}
+.dokumentacija {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dokumentacija a {
+  color: black;
+  font-weight: 1.3em;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+.dokumentacija a:hover {
+  background: white;
+  transition: 0.8s;
+}
+.element.copy .copytekst {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* animation */
+@keyframes item {
+  0% {
+    left: -180px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes item2 {
+  0% {
+    right: -180px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes jos {
+  0% {
+    top: -290px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes proizvod {
+  0% {
+    height: 0%;
+    width: 10%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.anm-jos {
+  position: relative;
+  top: 0px;
+  animation: 1.4s jos ease-in-out !important;
+}
+.anm-manje {
+  animation: none !important;
+}
+
+@media screen and (max-width: 738px) {
+  .element.onama .sadrzaj .onamaSlika img {
+    width: 82%;
+    height: 90%;
+  }
+  .element.proizvodi .artikli .proizvod {
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.proizvodi .artikli-ostali .proizvod {
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.proizvodi .artikli {
+    padding-bottom: 2px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .element.menu {
+    flex-direction: column;
+  }
+  .element.menu .items {
+    text-align: center;
+    position: relative;
+    top: 82px;
+
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .element.menu .items .item {
+    background: rgba(48, 48, 48, 0.938);
+    position: relative;
+    width: 100%;
+    animation: 1.5s item;
+    padding: 13px 0px;
+  }
+  .element.menu .items .item2 {
+    animation: item2 1.5s;
+  }
+
+  .element.menu .responsive {
+    display: flex;
+  }
+  .d-none {
+    display: none !important;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .element.onama .sadrzaj {
+    flex-direction: column-reverse;
+    display: flex;
+    justify-content: center !important;
+  }
+  .element.onama .sadrzaj .onamaTekst {
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding: 58px 0px;
+    justify-content: center !important;
+  }
+  .element.onama .sadrzaj .onamaSlika {
+    width: 100%;
+    padding-left: 0px;
+    height: auto;
+  }
+  .element.onama .sadrzaj .onamaSlika img {
+    width: 170px;
+    height: 180px;
+    position: relative;
+    top: -30px;
+  }
+  .element.kontakt .kontakt-sadrzaj .forma {
+    width: 82%;
+  }
+  .element.copy {
+    flex-direction: column-reverse;
+    padding-top: 15px;
+  }
+  .element.copy .drustvene,
+  .dokumentacija,
+  .copytekst {
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .element.home {
+    height: 381px;
+  }
+}
+
+@media screen and (max-width: 489px) {
+  .element.kontakt .kontakt-sadrzaj .forma form table tr td {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 342px) {
+  .element.autor #autorinfo #autortekst {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 382px) {
+  .element.proizvodi .artikli .proizvod {
+    width: 65%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.proizvodi .artikli-ostali .proizvod {
+    width: 65%;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  .element.proizvodi .artikli {
+    padding-bottom: 3px;
+  }
+  .element.autor #autorinfo {
+    flex-direction: column;
+    top: 0px;
+  }
+  .element.autor #autorinfo #autorslika {
+    left: 0px;
+    top: 22px;
+  }
+}
