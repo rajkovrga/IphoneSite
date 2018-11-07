@@ -6,18 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let barButton = document.getElementsByClassName("buttonR");
   barButton[0].addEventListener("click", menuButton);
 
-  // slider ////////
 
-  let proizvod = document.getElementsByClassName("proizvod");
-  console.log(proizvod.length);
-  let slika = document.getElementById("slika");
-  let slider = document.getElementById("slider");
-  for (let i = 0; i < proizvod.length; i++) {
-    proizvod[i].addEventListener("click", function() {
-      slider.style.display = "flex";
-      slide(i - 1, "next");
-    });
-  }
 
   // scroll /////////
 
@@ -41,7 +30,103 @@ document.addEventListener("DOMContentLoaded", function() {
       items.classList.remove("d-flex");
     }
   }
+  
+  // end slider
 
+  // top button
+
+  function buttonTop() {
+    $("html,body").animate({ scrollTop: 0 }, 1000);
+  }
+
+  function fadeTop() {
+    if ($(this).scrollTop() > 300) {
+      $("#top").fadeIn(500);
+    } else {
+      $("#top").fadeOut(300);
+    }
+  }
+
+  // down scroll
+
+  function downScroll() {
+    var hrr = $(this).attr("href");
+    var goTopp = $(hrr).offset().top;
+    $("html,body").animate({ scrollTop: goTopp }, 2000);
+  }
+
+  // menu element scroll
+
+  function elementScroll(e) {
+    var p = $(this).attr("href");
+    var tops = $(p).offset().top;
+    $("body,html")
+      .stop()
+      .animate({ scrollTop: tops }, 2000);
+  }
+  // JSON - JOS
+
+  $.getJSON("function/proizvodi.json", function(json) {
+    let artikli = "";
+    var n = 4;
+    function opet(n) {
+      for (var i = 0; i < n; i++) {
+        position(i);
+      }
+
+    }
+    function position(i) {
+      if (i >= 4) {
+        artikli +=
+          '<div class="proizvod proizvodJos"><img src="img/' +
+          json.proizvodi[i].slika +
+          "\"alt='" +
+          json.proizvodi[i].model +
+          "'>   <div class='naziv'><p>"+ json.proizvodi[i].model +"</p></div></div> ";
+      } else {
+        artikli +=
+          '<div class="proizvod"><img src="img/' +
+          json.proizvodi[i].slika +
+          "\"alt='" +
+          json.proizvodi[i].model +
+          "'> <div class='naziv'<p>"+ json.proizvodi[i].model +"</p></div></div> ";
+      }
+    }
+   
+
+    $(".dugme-jos").click(function() {
+      artikli = "";
+      if (n == 4) {
+        n = 8;
+        opet(n);
+        $("#p-jos").text("MANJE");
+        $(this).addClass("anm-jos");
+      } else if (n == 8) {
+        n = 4;
+        opet(n);
+        $(this).removeClass("anm-jos");
+        $("#p-jos").text("JOS");
+      }
+      r.innerHTML = artikli;
+    
+    });
+    opet(n);
+
+    var r = document.querySelector(".artikli");
+    r.innerHTML = artikli;
+  // slider ////////
+
+  let proizvod = document.getElementsByClassName("proizvod");
+  console.log(proizvod.length);
+  let slika = document.getElementById("slika");
+  let slider = document.getElementById("slider");
+  
+  for (let i = 0; i < proizvod.length; i++) {
+    proizvod[i].addEventListener("click", function() {
+      slider.style.display = "flex";
+      slide(i - 1, "next");
+    });
+  }
   // -slider
   function slide(current, direction = "prev") {
     switch (direction) {
@@ -85,85 +170,6 @@ document.addEventListener("DOMContentLoaded", function() {
     slide(current, "next");
   });
 
-  // end slider
-
-  // top button
-
-  function buttonTop() {
-    $("html,body").animate({ scrollTop: 0 }, 1000);
-  }
-
-  function fadeTop() {
-    if ($(this).scrollTop() > 300) {
-      $("#top").fadeIn(500);
-    } else {
-      $("#top").fadeOut(300);
-    }
-  }
-
-  // down scroll
-
-  function downScroll() {
-    var hrr = $(this).attr("href");
-    var goTopp = $(hrr).offset().top;
-    $("html,body").animate({ scrollTop: goTopp }, 2000);
-  }
-
-  // menu element scroll
-
-  function elementScroll(e) {
-    var p = $(this).attr("href");
-    var tops = $(p).offset().top;
-    $("body,html")
-      .stop()
-      .animate({ scrollTop: tops }, 2000);
-  }
-  // JSON - JOS
-
-  $.getJSON("function/proizvodi.json", function(json) {
-    let artikli = "";
-    var n = 4;
-    function opet(n) {
-      for (var i = 0; i < n; i++) {
-        position(i);
-      }
-    }
-    function position(i) {
-      if (i >= 4) {
-        artikli +=
-          '<div class="proizvod proizvodJos"><img src="img/' +
-          json.proizvodi[i].slika +
-          "\"alt='" +
-          json.proizvodi[i].model +
-          "'>   <div class='naziv'><p>"+ json.proizvodi[i].model +"</p></div></div> ";
-      } else {
-        artikli +=
-          '<div class="proizvod"><img src="img/' +
-          json.proizvodi[i].slika +
-          "\"alt='" +
-          json.proizvodi[i].model +
-          "'> <div class='naziv'<p>"+ json.proizvodi[i].model +"</p></div></div> ";
-      }
-    }
-    $(".dugme-jos").click(function() {
-      artikli = "";
-      if (n == 4) {
-        n = 8;
-        opet(n);
-        $("#p-jos").text("MANJE");
-        $(this).addClass("anm-jos");
-      } else if (n == 8) {
-        n = 4;
-        opet(n);
-        $(this).removeClass("anm-jos");
-        $("#p-jos").text("JOS");
-      }
-      r.innerHTML = artikli;
-    });
-    opet(n);
-
-    var r = document.querySelector(".artikli");
-    r.innerHTML = artikli;
   });
 
   // TYPED
