@@ -43,7 +43,7 @@
   justify-content: center;
   align-items: center;
   top: 0;
-  z-index: 200;
+  z-index: 85;
   flex-direction: column;
 }
 #sliderPhoto {
@@ -54,7 +54,8 @@
   justify-content: center;
   align-items: center;
   font-size: 3.2em;
-  position: relative;
+  position: fixed;
+  z-index:444;
 }
 #sliderPhoto img {
   position: absolute;
@@ -352,6 +353,14 @@
 }
 .dugme-jos .jos p {
   color: white;
+}
+.prosiri-flex
+{
+  display: flex !important;
+}
+.prosiri-none
+{
+  display: none !important;
 }
 
 /* kontakt /////////////////////////////////////////////////////////////*/
