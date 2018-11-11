@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (var i = 0; i < json.proizvodi.length; i++) {
       ubaci();
     }
+   
     function ubaci() {
       if (i >= 4) {
         artikli +=
@@ -76,15 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
       slika.src = proizvod[current].children[0].getAttribute("src");
       slika.setAttribute("data-current", current);
     }
-
-    // close slider
-    let cls = document.getElementsByClassName("close");
-    cls[0].addEventListener("click", function() {
-      if (slider.style.display == "flex") {
-        slider.style.display = "none";
-        c = 0;
-      }
-    });
 
     // Prev
 
@@ -161,7 +153,14 @@ document.addEventListener("DOMContentLoaded", function() {
       .stop()
       .animate({ scrollTop: tops }, 2000);
   }
-
+  // close slider
+  let cls = document.getElementsByClassName("close");
+  cls[0].addEventListener("click", function() {
+    if (slider.style.display == "flex") {
+      slider.style.display = "none";
+      c = 0;
+    }
+  });
   // TYPED
 
   var typed = new Typed("#welcome", {
