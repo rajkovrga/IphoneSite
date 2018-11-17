@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
   let itemClick = document.getElementsByClassName("item");
   let items = document.getElementById("items");
   barButton[0].addEventListener("click", menuButton);
-  for (var i = 0; i < itemClick.length; i++) {
-    var body = document.getElementsByTagName("body");
+  for (let i = 0; i < itemClick.length; i++) {
+    letbody = document.getElementsByTagName("body");
     itemClick[i].addEventListener("click", function() {
       if (body[0].scrollWidth < 670) {
         if (items.classList.contains("d-none")) {
@@ -29,113 +29,131 @@ document.addEventListener("DOMContentLoaded", function() {
   $(window).scroll(fadeTop);
   $("#top").click(buttonTop);
   // down scroll
-  $("#dole > a").click(downScroll);
+  $("#down > a").click(downScroll);
 
-  // KONTAKT REGEX
+  // contact REGEX
 
-  var pattEmail = new RegExp(
-    /^[^,.<>/?;:'"-_=+\|*+!@#$%^&\(\)\[\]\{\}`~]([\w\d.-]+|[\w.-]+)@\w+.{1,}(\w{2,3}){1}$/
-  );
-
-  let mail = document.getElementById("email");
-  let mailErr = document.querySelector("#mailErr");
-  mail.addEventListener("blur", function() {
-    let str = document.getElementById("email").value;
-    let regexTestMail = pattEmail.test(str);
-    if (str.length == 0) {
-      mail.style.borderColor = "rgb(122, 0, 0)";
-      mailErr.textContent = "* Nije uneta Email adresa";
-    } else if (regexTestMail == false) {
-      mail.style.borderColor = "rgb(122, 0, 0)";
-      mailErr.textContent = "* Nije dobro uneta Email adresa";
-    } else {
-      mail.style.borderColor = "rgb(95, 94, 94)";
-      mailErr.innerHTML = "";
+  let pattEmail = /^[A-Za-z]([a-zA-Z\.\-]{1,})@([a-z]+[.]){1,}([a-z]{2,3}){1}$/;
+  let pattTitle = /^[\w\s]{5,25}$/;
+  let pattDesc = /^[\w\s]{20,550}$/;
+  function addError(variable)
+  {
+    variable.setAttribute('class','errorBorder');
+  }
+  function rmError(variable)
+  {
+    if(variable.hasAttribute('class'))
+    {
+      variable.removeAttribute('class');
     }
-  });
-  var pattNaslov = new RegExp(/^[\w\s]{5,25}$/);
-  let naslovKontakt = document.querySelector("#naslovKontakt");
-  let naslovErr = document.querySelector("#naslovErr");
-
-  naslovKontakt.addEventListener("blur", function() {
-    let str2 = document.getElementById("naslovKontakt").value;
-    let regexTestNaslov = pattNaslov.test(str2);
-    if (str2.length == 0) {
-      naslovKontakt.style.borderColor = "rgb(122, 0, 0)";
-      naslovErr.textContent = "* Nije unet naslov";
-    } else if (str2.length < 5) {
-      naslovKontakt.style.borderColor = "rgb(122, 0, 0)";
-      naslovErr.textContent = "* Unet naslov je prekratak";
-    } else if (regexTestNaslov == false) {
-      naslovKontakt.style.borderColor = "rgb(122, 0, 0)";
-      naslovErr.textContent = "* Nije dobro unet naslov";
-    } else {
-      naslovKontakt.style.borderColor = "rgb(95, 94, 94)";
-      naslovErr.innerHTML = "";
+  }
+  document.getElementById('send').addEventListener('click',function(){
+    let errors = [];
+    let mailBox = document.querySelector('#email');
+    if(!pattEmail.test(mailBox.value))
+    {
+      errors.push('* Mail is not in correct format');
+      addError(mailBox);
     }
-  });
-  var pattOpis = new RegExp(/^[\w\s]{20,550}$/);
-  let opisKontakt = document.querySelector("#opisKontakt");
-  let opisErr = document.querySelector("#opisErr");
-
-  opisKontakt.addEventListener("blur", function() {
-    let str3 = document.querySelector("#opisKontakt").value;
-    let regexTestOpis = pattOpis.test(str3);
-    if (str3.length == 0) {
-      opisKontakt.style.borderColor = "rgb(122, 0, 0)";
-      opisErr.textContent = "* Nije unet opis";
-    } else if (str3.length < 20) {
-      opisKontakt.style.borderColor = "rgb(122, 0, 0)";
-      opisErr.textContent = "* Unet opis je prekratak";
-    } else if (regexTestOpis == false) {
-      opisKontakt.style.borderColor = "rgb(122, 0, 0)";
-      opisErr.textContent = "* Nije dobro unet opis";
-    } else {
-      opisKontakt.style.borderColor = "rgb(95, 94, 94)";
-      opisErr.innerHTML = "";
+    else if(mailBox.value == "")
+    {
+      errors.push('* Enter email');
+      addError(mailBox);
     }
-  });
+    else
+    {
+      rmError(mailBox);
+    }
+    let titleBox = document.querySelector('#titleContact');
+    if(!pattTitle.test(titleBox.value))
+    {
+      errors.push('* Title is not correct');
+      addError(titleBox);
+    }
+    else if(titleBox.value == "")
+    {
+      errors.push('* Enter title');
+      addError(titleBox);
+    }
+    else
+    {
+      rmError(titleBox);
+    }
 
+    let descContact = document.querySelector('#descContact'); 
+    
+    if(descContact.value == "") 
+    {
+      errors.push('* Enter description');
+      addError(descContact);
+    }
+    else if(!pattDesc.test(descContact.value))
+    {
+      errors.push('* Description is not correct');
+      addError(mailBox);
+    }
+    else
+    {
+      rmError(descContact);
+    }
+    
+    console.log(errors.length);
+    if(errors.length != 0 )
+    {
+      let errorVal = "<ul id='errorList'>";
+      for(let i = 0; i < errors.length;i++)
+      {
+        errorVal += "<li><p>" + errors[i] + "</p></li>"
+      }
+      errorVal += "</ul>";
+      document.querySelector('#error').innerHTML = errorVal;
+    }
+    else
+    {
+      document.querySelector('#error').innerHTML = "";
+    }
+   
+  });
   // SLIDER
-  let proizvod = document.getElementsByClassName("proizvod");
-  $.getJSON("function/proizvodi.json", function(json) {
-    let artikli = "";
-    for (var i = 0; i < json.proizvodi.length; i++) {
-      ubaci();
+  let product = document.getElementsByClassName("product");
+  $.getJSON("function/products.json", function(json) {
+    let articles = "";
+    for (var i = 0; i < json.products.length; i++) {
+      putIn();
     }
 
-    function ubaci() {
+    function putIn() {
       if (i >= 4) {
-        artikli +=
-          '<div class="proizvod proizvodJos prosiri-none"><img src="img/' +
-          json.proizvodi[i].slika +
+        articles +=
+          '<div class="product productmore extend-none"><img src="img/' +
+          json.products[i].photo +
           "\"alt='" +
-          json.proizvodi[i].model +
+          json.products[i].model +
           "'>   <div class='naziv'><p>" +
-          json.proizvodi[i].model +
+          json.products[i].model +
           "</p></div></div> ";
       } else {
-        artikli +=
-          '<div class="proizvod"><img src="img/' +
-          json.proizvodi[i].slika +
+        articles +=
+          '<div class="product"><img src="img/' +
+          json.products[i].photo +
           "\"alt='" +
-          json.proizvodi[i].model +
+          json.products[i].model +
           "'> <div class='naziv'<p>" +
-          json.proizvodi[i].model +
+          json.products[i].model +
           "</p></div></div> ";
       }
     }
 
-    var r = document.querySelector(".artikli");
-    r.innerHTML += artikli;
+    let r = document.querySelector(".articles");
+    r.innerHTML += articles;
 
     // slider ////////
-    let slika = document.getElementById("slika");
+    let photo = document.getElementById("photo");
     let slider = document.getElementById("slider");
-    let detalji = document.querySelector(".detalji");
-    let detaljiElementi = "";
-    for (let i = 0; i < proizvod.length; i++) {
-      proizvod[i].addEventListener("click", function() {
+    let detalis = document.querySelector(".detalis");
+    let detalisElement = "";
+    for (let i = 0; i < product.length; i++) {
+      product[i].addEventListener("click", function() {
         slider.style.display = "flex";
 
         slide(i - 1, "next");
@@ -147,34 +165,34 @@ document.addEventListener("DOMContentLoaded", function() {
       switch (direction) {
         case "prev":
           if (--current < 0) {
-            current = proizvod.length - 1;
+            current = product.length - 1;
           }
           break;
         case "next":
-          if (++current > proizvod.length - 1) {
+          if (++current > product.length - 1) {
             current = 0;
           }
           break;
       }
 
-      slika.src = proizvod[current].children[0].getAttribute("src");
-      detaljiElementi =
+      photo.src = product[current].children[0].getAttribute("src");
+      detalisElement =
         "<p> Model:" +
-        json.proizvodi[current].model +
-        "</p><p> Boja:" +
-        json.proizvodi[current].boja +
+        json.products[current].model +
+        "</p><p> color:" +
+        json.products[current].color +
         "</p><p> Cena:" +
-        json.proizvodi[current].cena +
+        json.products[current].cena +
         "</p>";
-      detalji.innerHTML = detaljiElementi;
-      slika.setAttribute("data-current", current);
+      detalis.innerHTML = detalisElement;
+      photo.setAttribute("data-current", current);
     }
 
     // Prev
 
     let btnL = document.getElementsByClassName("fa-caret-left");
     btnL[0].addEventListener("click", function() {
-      let current = parseInt(slika.getAttribute("data-current"));
+      let current = parseInt(photo.getAttribute("data-current"));
       slide(current);
     });
 
@@ -182,22 +200,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let btnR = document.getElementsByClassName("fa-caret-right");
     btnR[0].addEventListener("click", function() {
-      let current = parseInt(slika.getAttribute("data-current"));
+      let current = parseInt(photo.getAttribute("data-current"));
 
       slide(current, "next");
     });
   });
 
-  var prosiri = document.getElementsByClassName("dugme-jos");
+  let extend = document.getElementsByClassName("button-more");
   let br = 0;
-  prosiri[0].addEventListener("click", function() {
+  extend[0].addEventListener("click", function() {
     br += 1;
 
-    for (var i = 4; i < proizvod.length; i++) {
+    for (let i = 4; i < product.length; i++) {
       if (br % 2 == 1) {
-        proizvod[i].classList.remove("prosiri-none");
+        product[i].classList.remove("extend-none");
       } else {
-        proizvod[i].classList.add("prosiri-none");
+        product[i].classList.add("extend-none");
       }
     }
   });
@@ -232,23 +250,23 @@ document.addEventListener("DOMContentLoaded", function() {
   // down scroll
 
   function downScroll() {
-    var hrr = $(this).attr("href");
-    var goTopp = $(hrr).offset().top;
+    lethrr = $(this).attr("href");
+    letgoTopp = $(hrr).offset().top;
     $("html,body").animate({ scrollTop: goTopp }, 2000);
   }
 
   // menu element scroll
 
   function elementScroll(e) {
-    var p = $(this).attr("href");
-    var tops = $(p).offset().top;
+    letp = $(this).attr("href");
+    lettops = $(p).offset().top;
     $("body,html")
       .stop()
       .animate({ scrollTop: tops }, 2000);
   }
   // close slider
   let cls = document.getElementsByClassName("close");
-  for (var i = 0; i < cls.length; i++) {
+  for (let i = 0; i < cls.length; i++) {
     cls[i].addEventListener("click", function() {
       if (slider.style.display == "flex") {
         slider.style.display = "none";
@@ -259,8 +277,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // TYPED
 
-  var typed = new Typed("#welcome", {
-    strings: ["dobro dosli"],
+  lettyped = new Typed("#welcome", {
+    strings: ["Welcome :)"],
     cursorChar: "",
     typeSpeed: 300
   });

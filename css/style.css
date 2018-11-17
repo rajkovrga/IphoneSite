@@ -5,10 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
-
 }
 
-#JOSID {
+#moreID {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -58,25 +57,24 @@
   align-items: center;
   font-size: 3.2em;
   position: fixed;
-  z-index:444;
+  z-index: 444;
 }
 #sliderPhoto img {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-#sliderPhoto .detalji
-{
-position: absolute;
-bottom: -75px;
-width:100%;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-background: black;
-color: white;
-font-size:0.45em;
+#sliderPhoto .detalis {
+  position: absolute;
+  bottom: -75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
+  color: white;
+  font-size: 0.45em;
 }
 
 #slider .close {
@@ -94,19 +92,16 @@ font-size:0.45em;
   color: white;
   font-size: 3.5em;
 }
-#slider #sliderPhoto .closeM
-{
-background: rgb(0, 0, 0);
-position: absolute;
-top:0px;
-right: 0px;
-display: none;
-justify-content: center;
+#slider #sliderPhoto .closeM {
+  background: rgb(0, 0, 0);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: none;
+  justify-content: center;
 }
-#slider #sliderPhoto .close i
-{
+#slider #sliderPhoto .close i {
   font-size: 0.8em;
-
 }
 #sliderPhoto .leftright {
   height: 30px;
@@ -122,7 +117,7 @@ justify-content: center;
   padding: 8px;
 }
 
-.naslov {
+.title {
   width: 100%;
   height: 100px;
   display: flex;
@@ -130,7 +125,7 @@ justify-content: center;
   font-size: 1.5em;
   align-items: center;
 }
-.naslov h2 {
+.title h2 {
   width: auto;
   height: auto;
   background: rgba(212, 204, 204, 0.596);
@@ -207,16 +202,16 @@ justify-content: center;
   align-items: center;
   justify-content: center;
 }
-.element.home #naslov {
+.element.home #title {
   padding: 14px 50px;
   position: absolute;
   top: 85px;
   background: rgba(85, 82, 82, 0.514);
 }
-.element.home #naslov h1 {
+.element.home #title h1 {
   padding: 10px 0px;
 }
-.element.home #dole {
+.element.home #down {
   width: 100px;
   font-size: 1.8em;
   padding: 10px 0px;
@@ -224,18 +219,18 @@ justify-content: center;
   position: absolute;
   bottom: 32px;
 }
-.element.home #dole:hover {
+.element.home #down:hover {
   background: rgba(201, 197, 191, 0.932);
   transition: 0.6s;
 }
-.element.home #dole a {
+.element.home #down a {
   color: black;
   font-size: 1.2em;
 }
 
-/* onama ///////////////////////////////////////////////////////// */
+/* about ///////////////////////////////////////////////////////// */
 
-.element.onama {
+.element.about {
   min-height: 540px;
   position: relative;
   background: rgb(226, 226, 226);
@@ -244,32 +239,32 @@ justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.element.onama h2 {
+.element.about h2 {
   padding-top: 90px;
   width: 100%;
 }
 
-.element.onama .sadrzaj {
+.element.about .content {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
 }
-.element.onama .sadrzaj .onamaSlika {
+.element.about .content .aboutphoto {
   width: 35%;
   display: flex;
   justify-content: center;
   height: 300px;
   padding-left: 50px;
 }
-.element.onama .sadrzaj .onamaSlika img {
+.element.about .content .aboutphoto img {
   width: 70%;
   display: flex;
   justify-content: center;
   height: 90%;
 }
 
-.element.onama .sadrzaj .onamaTekst {
+.element.about .content .aboutText {
   display: flex;
   width: 34%;
   height: 300px;
@@ -277,12 +272,12 @@ justify-content: center;
   text-align: center;
 }
 
-/* proizvodi  /////////////////////////////////////////////////////////////*/
+/* products  /////////////////////////////////////////////////////////////*/
 
-.element.proizvodi {
+.element.products {
   height: auto !important;
   text-align: center;
-  background: url("../img/proizvodi2.png");
+  background: url("../img/products.png");
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
@@ -290,23 +285,23 @@ justify-content: center;
   padding-top: 85px;
 }
 
-.proizvod img {
+.product img {
   width: 100%;
   height: 100%;
   border: 1px solid black;
 
-  /*animation: proizvod 2s ease-in-out;*/
+  /*animation: product 2s ease-in-out;*/
 }
 
-.proizvodJos img {
+.productmore img {
   width: 100%;
   height: 100%;
   border: 1px solid black;
   margin: 0 auto;
-  animation: proizvod 1.4s ease-in-out;
+  animation: product 1.4s ease-in-out;
 }
 
-.element.proizvodi .artikli {
+.element.products .articles {
   position: relative;
   width: 100%;
   height: auto;
@@ -318,7 +313,7 @@ justify-content: center;
   padding-bottom: 48px;
 }
 
-.element.proizvodi .artikli .proizvod {
+.element.products .articles .product {
   width: 21%;
   height: 290px;
   padding: 20px;
@@ -328,20 +323,20 @@ justify-content: center;
   top: 0px;
   margin-bottom: 15px;
 }
-.element.proizvodi .artikli .proizvod .naziv {
+.element.products .articles .product .naziv {
   background: rgb(95, 89, 89);
   color: white;
   text-transform: uppercase;
   padding: 13px 0px;
 }
-.element.proizvodi .artikli-ostali {
+.element.products .articles-ostali {
   position: relative;
   width: 100%;
   height: auto;
 
   justify-content: space-around;
 }
-.element.proizvodi .artikli-ostali .proizvod {
+.element.products .articles-ostali .product {
   width: 20%;
   height: 290px;
   display: flex;
@@ -357,7 +352,7 @@ justify-content: center;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.dugme-jos {
+.button-more {
   width: 100%;
   position: relative;
   margin-top: 56px;
@@ -368,7 +363,7 @@ justify-content: center;
   top: 0px;
   text-align: center;
 }
-.dugme-jos .jos {
+.button-more .more {
   height: 30px;
   width: auto;
   align-items: center;
@@ -378,29 +373,31 @@ justify-content: center;
   bottom: 0;
   background: rgb(53, 53, 53);
 }
-.dugme-jos .jos:hover {
+.button-more .more:hover {
   background: rgb(85, 83, 83);
   transition: 0.6s;
 }
-.dugme-jos .jos p {
+.button-more .more p {
   color: white;
 }
-.prosiri-flex
-{
+.extend-flex {
   display: flex !important;
 }
-.prosiri-none
-{
+.extend-none {
   display: none !important;
 }
 
-/* kontakt /////////////////////////////////////////////////////////////*/
-
-.element.kontakt {
+/* contact /////////////////////////////////////////////////////////////*/
+.errorBorder
+{
+  border-color:rgb(122, 0, 0) !important;
+}
+.element.contact {
   min-height: 480px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  background: url("../img/kontakt.jpg");
+  background: url("../img/contact.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -409,39 +406,39 @@ justify-content: center;
   padding-bottom: 30px;
 }
 
-.element.kontakt .kontakt-sadrzaj {
+.element.contact .contact-content {
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   display: flex;
+flex-direction: column;
   justify-content: center;
-  position: relative;
+  align-items: center;
+
 }
-.element.kontakt .kontakt-sadrzaj .forma {
+.element.contact .contact-content .contactForm {
   width: 50%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.295);
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.element.kontakt .kontakt-sadrzaj .forma form {
-  width: 100%;
-}
-.element.kontakt .kontakt-sadrzaj .forma form table {
-  width: 100%;
-}
-.element.kontakt .kontakt-sadrzaj .forma form table tr {
+.element.contact .contact-content .contactForm {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.element.kontakt .kontakt-sadrzaj .forma form table tr td {
+.element.contact .contact-content .contactForm {
   display: flex;
-  width: 60%;
+  width: 53%;
   justify-content: center;
-  padding: 6px 0px;
+  padding: 35px 0px;
 }
-.element.kontakt .kontakt-sadrzaj .forma form table tr td p {
+.element.contact .contact-content .contactForm p {
   font-size: 1.7em;
   color: black;
   font-weight: bold;
+  padding:10px 0px;
 }
 
 input[type="text"],
@@ -450,7 +447,7 @@ textarea {
   resize: none;
   width: auto;
   border: none;
-  width: 90%;
+  width: 57%;
   padding: 2px 0px;
   cursor: pointer;
   border: 2px solid rgb(95, 94, 94);
@@ -461,17 +458,17 @@ input[type="text"] {
 textarea {
   height: 108px;
   padding: 11px 9px;
-  width: 90%;
+
 }
-#posalji {
-  width: 60%;
+#send {
+  width: 57%;
   border: none;
   padding: 15px 0px;
-  margin-top: 15px;
+  margin-top: 26px;
   background: rgb(51, 51, 51);
   color: white;
 }
-#posalji:hover {
+#send:hover {
   background: rgb(90, 88, 88);
   transition: 0.8s;
 }
@@ -482,28 +479,41 @@ textarea:focus {
   border: 3px solid rgb(20, 20, 20);
   transition: 0.6s;
 }
-
-#greske
-{
+/* 
+#error {
   display: flex;
   justify-content: left;
   flex-direction: column;
   font-size: 0.7em;
 }
-#greske p
-{
+#error p {
   color: rgba(177, 9, 9, 0.842);
-  padding:0px 10px;
+  padding: 0px 10px;
   background: rgba(255, 250, 250, 0.685);
-}
-/* servis /////////////////////////////////////////////////////////////*/
+} */
+#errorList
+{
+  display: flex;
+  margin-top: 10px;
+  justify-content: left;
+  flex-direction: column;
 
-.element.servis {
+}
+#errorList li p
+{
+  background: rgba(255, 250, 250, 0.685);
+  font-size: 1.4em;
+  padding: 4px 18px;
+  color: rgba(177, 9, 9, 0.842);
+}
+/* service /////////////////////////////////////////////////////////////*/
+
+.element.service {
   min-height: 450px;
   background: rgb(244, 244, 255);
   padding-bottom: 75px;
 }
-.element.servis .sadrzaj-servisa {
+.element.service .content-service {
   position: relative;
   top: 25px;
   width: 100%;
@@ -512,20 +522,20 @@ textarea:focus {
   justify-content: center;
   align-items: center;
 }
-.element.servis .naslov {
+.element.service .title {
   padding-top: 130px;
 }
-.element.servis .sadrzaj-servisa .slika-servisa {
+.element.service .content-service .photo-service {
   width: 300px;
   height: 250px;
   padding-bottom: 50px;
 }
-.element.servis .sadrzaj-servisa .slika-servisa img {
+.element.service .content-service .photo-service img {
   width: 100%;
   height: 100%;
   opacity: 0.1;
 }
-.element.servis .tekst-servisa {
+.element.service .text-service {
   width: 100%;
   height: 270px;
   position: absolute;
@@ -535,7 +545,7 @@ textarea:focus {
   flex-direction: column;
 }
 
-.element.servis .tekst-servisa #info {
+.element.service .text-service #info {
   display: flex;
   justify-content: center;
   width: 74%;
@@ -543,39 +553,39 @@ textarea:focus {
   text-align: center;
   font-size: 1.7em;
 }
-.element.servis .tekst-servisa #info-button {
+.element.service .text-service #info-button {
   width: auto;
   height: auto;
   padding: 10px 32px;
   background: rgb(53, 53, 53);
   color: white;
 }
-.element.servis .tekst-servisa #info-button:hover {
+.element.service .text-service #info-button:hover {
   background: rgb(85, 83, 83);
   transition: 0.6s;
 }
-.element.servis .tekst-servisa #info-button a {
+.element.service .text-service #info-button a {
   color: white;
 }
 
-/* autor  ////////////////////////////////////////////////////////////////////////////////*/
+/* author  ////////////////////////////////////////////////////////////////////////////////*/
 
-.element.autor {
+.element.author {
   min-height: 450px;
   background: rgb(226, 226, 226);
 }
 
-.element.autor .naslov {
+.element.author .title {
   padding-top: 17px;
 }
-.element.autor #autorinfo {
+.element.author #authorInfo {
   width: 100%;
   min-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.element.autor #autorinfo #autorslika {
+.element.author #authorInfo #authorphoto {
   width: 180px;
   height: 180px;
   z-index: 10;
@@ -584,12 +594,12 @@ textarea:focus {
   border-radius: 50%;
   border: 6px solid rgba(14, 11, 11, 0.76);
 }
-.element.autor #autorinfo #autorslika img {
+.element.author #authorInfo #authorphoto img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.element.autor #autorinfo #autortekst {
+.element.author #authorInfo #authorText {
   width: 350px;
   height: 130px;
   background: rgb(165, 172, 166);
@@ -599,7 +609,7 @@ textarea:focus {
   top: 5px;
   right: 3px;
 }
-.element.autor #autorinfo #autortekst #mojopis {
+.element.author #authorInfo #authorText #myDesc {
   width: 91%;
   height: 100%;
   display: flex;
@@ -607,7 +617,7 @@ textarea:focus {
   font-size: 1.4em;
   float: right;
 }
-.element.autor #autorinfo #autortekst #mojopis p label {
+.element.author #authorInfo #authorText #myDesc p label {
   font-weight: bolder;
 }
 
@@ -621,7 +631,7 @@ textarea:focus {
   align-items: center;
   padding: 6px 10px;
 }
-.element.copy .drustvene {
+.element.copy .social {
   width: 180px;
   height: 100%;
 
@@ -630,39 +640,37 @@ textarea:focus {
   align-items: center;
 }
 
-.element.copy .drustvene a {
+.element.copy .social a {
   color: white;
   padding: 6px;
 }
-.element.copy .drustvene a:hover {
+.element.copy .social a:hover {
   color: black;
   transition: 0.8s;
 }
-.dokumentacija {
+.Documentation {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.dokumentacija a {
+.Documentation a {
   color: black;
   font-weight: 1.3em;
   padding: 6px 8px;
   border-radius: 4px;
   border: 1px solid black;
 }
-.dokumentacija a:hover {
+.Documentation a:hover {
   background: white;
   transition: 0.8s;
 }
-.element.copy .copytekst {
+.element.copy .copyText {
   width: 120px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 /* animation */
 @keyframes item {
@@ -685,7 +693,7 @@ textarea:focus {
     opacity: 1;
   }
 }
-@keyframes jos {
+@keyframes more {
   0% {
     top: -290px;
   }
@@ -693,7 +701,7 @@ textarea:focus {
     top: 0px;
   }
 }
-@keyframes proizvod {
+@keyframes product {
   0% {
     height: 0%;
     width: 10%;
@@ -704,35 +712,36 @@ textarea:focus {
   }
 }
 
-.anm-jos {
+.anm-more {
   position: relative;
   top: 0px;
-  animation: 1.4s jos ease-in-out !important;
+  animation: 1.4s more ease-in-out !important;
 }
 .anm-manje {
   animation: none !important;
 }
 
-div a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
+div
+  a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
   display: none;
 }
 
 @media screen and (max-width: 738px) {
-  .element.onama .sadrzaj .onamaSlika img {
+  .element.about .content .aboutphoto img {
     width: 82%;
     height: 90%;
   }
-  .element.proizvodi .artikli .proizvod {
+  .element.products .articles .product {
     width: 40%;
     flex-direction: column;
     padding-bottom: 48px;
   }
-  .element.proizvodi .artikli-ostali .proizvod {
+  .element.products .articles-ostali .product {
     width: 40%;
     flex-direction: column;
     padding-bottom: 48px;
   }
-  .element.proizvodi .artikli {
+  .element.products .articles {
     padding-bottom: 2px;
   }
 }
@@ -748,12 +757,10 @@ div a[title="Hosted on free web hosting 000webhost.com. Host your own website fo
     width: 100%;
     flex-direction: column;
   }
-  #slider #sliderPhoto .closeM
-  {
+  #slider #sliderPhoto .closeM {
     display: flex;
   }
-  #slider .close
-  {
+  #slider .close {
     display: none;
   }
   .element.menu .items .item {
@@ -776,39 +783,43 @@ div a[title="Hosted on free web hosting 000webhost.com. Host your own website fo
   .d-flex {
     display: flex;
   }
-  .element.onama .sadrzaj {
+  .element.about .content {
     flex-direction: column-reverse;
     display: flex;
     justify-content: center !important;
   }
-  .element.onama .sadrzaj .onamaTekst {
+  .element.about .content .aboutText {
     width: 100%;
     display: flex;
     height: auto;
     padding: 58px 0px;
     justify-content: center !important;
   }
-  .element.onama .sadrzaj .onamaSlika {
+  .element.about .content .aboutphoto {
     width: 100%;
     padding-left: 0px;
     height: auto;
   }
-  .element.onama .sadrzaj .onamaSlika img {
+  .element.about .content .aboutphoto img {
     width: 170px;
     height: 180px;
     position: relative;
     top: -30px;
   }
-  .element.kontakt .kontakt-sadrzaj .forma {
+  .element.contact .contact-content .contactForm {
     width: 82%;
+  }
+  .element.contact .contact-content .contactForm textarea,#send,input[type='text']
+  {
+    width:82%;
   }
   .element.copy {
     flex-direction: column-reverse;
     padding-top: 15px;
   }
-  .element.copy .drustvene,
-  .dokumentacija,
-  .copytekst {
+  .element.copy .social,
+  .Documentation,
+  .copyText {
     padding-bottom: 15px;
   }
 }
@@ -819,34 +830,38 @@ div a[title="Hosted on free web hosting 000webhost.com. Host your own website fo
 }
 
 @media screen and (max-width: 489px) {
-  .element.kontakt .kontakt-sadrzaj .forma form table tr td {
+  .element.contact .contact-content .contactForm {
     width: 100%;
+  }
+  .element.contact .contact-content .contactForm textarea,#send,input[type='text']
+  {
+    width:97%;
   }
 }
 @media screen and (max-width: 342px) {
-  .element.autor #autorinfo #autortekst {
+  .element.author #authorInfo #authorText {
     width: 280px;
   }
 }
 @media screen and (max-width: 382px) {
-  .element.proizvodi .artikli .proizvod {
+  .element.products .articles .product {
     width: 65%;
     flex-direction: column;
     padding-bottom: 48px;
   }
-  .element.proizvodi .artikli-ostali .proizvod {
+  .element.products .articles-ostali .product {
     width: 65%;
     flex-direction: column;
     padding-bottom: 48px;
   }
-  .element.proizvodi .artikli {
+  .element.products .articles {
     padding-bottom: 3px;
   }
-  .element.autor #autorinfo {
+  .element.author #authorInfo {
     flex-direction: column;
     top: 0px;
   }
-  .element.autor #autorinfo #autorslika {
+  .element.author #authorInfo #authorphoto {
     left: 0px;
     top: 22px;
   }

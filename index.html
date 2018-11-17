@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="Description"
-      content="Dobro došli u Apple shop, na našem sajtu mozete naći veliki broj telefona. Možete nas kontaktirati putem naše kontakt forme koju možete naći na stranici"
+      content="Dobro došli u Apple shop, na našem sajtu mozete naći veliki broj telefona. Možete nas contactirati putem naše contact forme koju možete naći na stranici"
     />
 
     <meta name="robots" content="index, follow" />
     <meta name="Keywords" content="apple, iphone, Rajko, shop, xs" />
     <meta name="author" content="Rajko Vrga" />
-    <title>Apple Home</title>
+    <title>Apple Shop</title>
 
     <link
       rel="stylesheet"
@@ -22,72 +22,71 @@
     />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-   
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
-    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <div class="element menu">
       <div class="responsive">
-        <div class="logo"><img src="img/logo.png" alt="" /></div>
+        <div class="logo"><img src="img/logo.png" alt="logo site" /></div>
         <div class="buttonR" data-bar="#items"><i class="fas fa-bars"></i></div>
       </div>
       <ul id="items" class="items d-none">
-        <li class="item logo"><img src="img/logo.png" alt="" /></li>
-        <li class="item"><a href="#onama">O nama</a></li>
-        <li class="item item2"><a href="#proizvodi">Proizvodi</a></li>
-        <li class="item item2"><a href="#servis">Servis</a></li>
-        <li class="item"><a href="#kontakt">Kontakt</a></li>
-        <li class="item"><a href="#autor">Autor</a></li>
+        <li class="item logo"><img src="img/logo.png" alt="logo site" /></li>
+        <li class="item"><a href="#about">About</a></li>
+        <li class="item item2"><a href="#products">Products</a></li>
+        <li class="item item2"><a href="#service">Service</a></li>
+        <li class="item"><a href="#contact">Contact</a></li>
+        <li class="item"><a href="#author">Author</a></li>
       </ul>
     </div>
     <div class="element home">
-      <div id="naslov">
+      <div id="title">
         <h1>Iphone shop</h1>
         <h3 id="welcome"></h3>
       </div>
 
-      <div id="dole">
-        <a href="#onama"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      <div id="down">
+        <a href="#about"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
       </div>
     </div>
 
-    <div class="element onama" id="onama">
-      <h2>O nama</h2>
-      <div class="sadrzaj">
+    <div class="element about" id="about">
+      <h2>About</h2>
+      <div class="content">
         <div
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-easing="ease-in-sine"
-          class="onamaSlika"
+          class="aboutphoto"
         >
-          <img src="img/onama.png" alt="" />
+          <img src="img/about.png" alt="about photo" />
         </div>
-        <div class="onamaTekst">
+        <div class="aboutText">
           <p
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           >
-            Ovo je prodavnica za prodaju Iphone telefona u Beogradu, osnovana
-            2011 godine
+            This is a store where Apple mobile phone are sold in Belgrade,
+            started working 2011
           </p>
         </div>
       </div>
     </div>
 
-    <div class="element proizvodi" id="proizvodi">
-      <div class="naslov"><h2>Proizvodi</h2></div>
-      <div class="artikli"></div>
-      <div class="dugme-jos">
-        <div class="jos"><p id="p-jos">JOS</p></div>
+    <div class="element products" id="products">
+      <div class="title"><h2>Products</h2></div>
+      <div class="articles"></div>
+      <div class="button-more">
+        <div class="more"><p id="p-more">MORE</p></div>
       </div>
     </div>
     <div id="slider">
@@ -96,107 +95,72 @@
         <div class="close closeM">
           <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-        <img src="" id="slika" alt="" />
+        <img src="" id="photo" alt="slide now" />
 
         <div class="leftright">
           <i class="fas button-slide fa-caret-left" aria-hidden="true"></i>
           <i class="fas button-slide fa-caret-right" aria-hidden="true"></i>
         </div>
-        <div class="detalji"></div>
+        <div class="detalis"></div>
       </div>
     </div>
-    <div class="element servis" id="servis">
-      <div class="naslov"><h2>Servis</h2></div>
-      <div class="sadrzaj-servisa">
-        <div class="slika-servisa"><img src="img/alatka.png" alt="" /></div>
-        <div class="tekst-servisa">
+    <div class="element service" id="service">
+      <div class="title"><h2>Service</h2></div>
+      <div class="content-service">
+        <div class="photo-service">
+          <img src="img/tool.png" alt="photo tool" />
+        </div>
+        <div class="text-service">
           <div id="info">
             <p
-              data-aos="zoom-out-up"
+              data-aos="zoom-out"
               data-aos-offset="300"
               data-aos-duration="3000"
             >
-              Servisiranje Apple uredjaja mozete obaviti u ovlascenom servisu,
-              njih mozete kontaktirati na linku ispod
+              You can service your Apple mobile phone in our authorized service.
+              Contact them on the link below
             </p>
           </div>
           <div id="info-button">
-            <a target="_blank" href="https://www.appleservis.rs/">LINK</a>
+            <a target="_blank" href="https://www.appleservice.rs/">LINK</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="element kontakt" id="kontakt">
-      <div class="naslov"><h2>Kontakt</h2></div>
-      <div class="kontakt-sadrzaj">
-        <div class="forma">
-          <form action="" method="POST">
-            <table>
-              <tr>
-                <td><p>E-mail</p></td>
-              </tr>
-              <tr>
-                <td><input type="text" name="email" id="email" /></td>
-              </tr>
-              <tr>
-                <td><p>Naslov</p></td>
-              </tr>
-              <tr>
-                <td><input type="text" name="nasov" id="naslovKontakt" /></td>
-              </tr>
-              <tr>
-                <td><p>Opis</p></td>
-              </tr>
-              <tr>
-                <td>
-                  <textarea
-                    name="opis"
-                    id="opisKontakt"
-                    resize="none"
-                  ></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="submit"
-                    disabled="true"
-                    id="posalji"
-                    value="Posalji"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td id="greske">
-                  <p id="mailErr"></p>
-                  <p id="naslovErr"></p>
-                  <p id="opisErr"></p>
-                </td>
-              </tr>
-            </table>
-          </form>
+    <div class="element contact" id="contact">
+      <div class="title"><h2>Contact</h2></div>
+      <div class="contact-content">
+        <div class="contactForm">
+          <p>E-mail</p>
+          <input type="text" name="email" id="email" />
+          <p>Title</p>
+          <input type="text" name="title" id="titleContact" />
+          <p>Description</p>
+          <textarea name="opis" id="descContact" resize="none"></textarea>
+          <input type="button" id="send" value="Send" />
+          <div id="error"></div>
         </div>
       </div>
     </div>
 
-    <div class="element autor" id="autor">
-      <div class="naslov"><h2>Autor</h2></div>
-      <div id="autorinfo">
-        <div data-aos="fade-right" data-aos-duration="3000" id="autorslika">
-          <img src="img/autor.png" alt="" />
+    <div class="element author" id="author">
+      <div class="title"><h2>Author</h2></div>
+      <div id="authorInfo">
+        <div data-aos="fade-right" data-aos-duration="3000" id="authorphoto">
+          <img src="img/author.png" alt="photo author" />
         </div>
-        <div id="autortekst" data-aos="zoom-in" data-aos-duration="3000">
-          <div id="mojopis">
+        <div id="authorText" data-aos="zoom-in" data-aos-duration="3000">
+          <div id="myDesc">
             <p>
-              Moje ime je <label> Rajko Vrga </label> i student sam druge godine
-              Visoke ICT
+              My name is <label> Rajko Vrga </label> and I'm studing at ICT
+              College
             </p>
           </div>
         </div>
       </div>
     </div>
     <div class="element copy">
-      <div class="drustvene">
+      <div class="social">
         <a
           target="blank_"
           class="fab fa-instagram"
@@ -215,8 +179,8 @@
           href="http://www.twitter.com"
         ></a>
       </div>
-      <div class="dokumentacija"><a href="">Dokumentacija</a></div>
-      <div class="copytekst"><p>&copy; Copyright</p></div>
+      <div class="Documentation"><a href="">Documentation</a></div>
+      <div class="copyText"><p>&copy; Copyright</p></div>
     </div>
 
     <div id="top">
