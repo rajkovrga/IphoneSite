@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   AOS.init();
-
-  // menu
-  // menu button
+  // menu responsive
   let barButton = document.getElementsByClassName("buttonR");
   let itemClick = document.getElementsByClassName("item");
   let items = document.getElementById("items");
@@ -21,98 +19,75 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
-  // scroll /////////
-
-  // menu element scroll
-  $(".item > a").click(elementScroll);
-  // top button
+  // // top button
   $(window).scroll(fadeTop);
   $("#top").click(buttonTop);
-  // down scroll
-  $("#down > a").click(downScroll);
+
+  //smooth scroll plugin
+
+  $("a").smoothScroll({
+    speed: 2000
+  });
 
   // contact REGEX
 
   let pattEmail = /^[A-Za-z]([a-zA-Z\.\-]{1,})@([a-z]+[.]){1,}([a-z]{2,3}){1}$/;
   let pattTitle = /^[\w\s]{5,25}$/;
   let pattDesc = /^[\w\s]{20,550}$/;
-  function addError(variable)
-  {
-    variable.setAttribute('class','errorBorder');
+  function addError(variable) {
+    variable.setAttribute("class", "errorBorder");
   }
-  function rmError(variable)
-  {
-    if(variable.hasAttribute('class'))
-    {
-      variable.removeAttribute('class');
+  function rmError(variable) {
+    if (variable.hasAttribute("class")) {
+      variable.removeAttribute("class");
     }
   }
-  document.getElementById('send').addEventListener('click',function(){
+  document.getElementById("send").addEventListener("click", function() {
     let errors = [];
-    let mailBox = document.querySelector('#email');
-    if(!pattEmail.test(mailBox.value))
-    {
-      errors.push('* Mail is not in correct format');
+    let mailBox = document.querySelector("#email");
+    if (!pattEmail.test(mailBox.value)) {
+      errors.push("* Mail is not in correct format");
       addError(mailBox);
-    }
-    else if(mailBox.value == "")
-    {
-      errors.push('* Enter email');
+    } else if (mailBox.value == "") {
+      errors.push("* Enter email");
       addError(mailBox);
-    }
-    else
-    {
+    } else {
       rmError(mailBox);
     }
-    let titleBox = document.querySelector('#titleContact');
-    if(!pattTitle.test(titleBox.value))
-    {
-      errors.push('* Title is not correct');
+    let titleBox = document.querySelector("#titleContact");
+    if (!pattTitle.test(titleBox.value)) {
+      errors.push("* Title is not correct");
       addError(titleBox);
-    }
-    else if(titleBox.value == "")
-    {
-      errors.push('* Enter title');
+    } else if (titleBox.value == "") {
+      errors.push("* Enter title");
       addError(titleBox);
-    }
-    else
-    {
+    } else {
       rmError(titleBox);
     }
 
-    let descContact = document.querySelector('#descContact'); 
-    
-    if(descContact.value == "") 
-    {
-      errors.push('* Enter description');
+    let descContact = document.querySelector("#descContact");
+
+    if (descContact.value == "") {
+      errors.push("* Enter description");
       addError(descContact);
-    }
-    else if(!pattDesc.test(descContact.value))
-    {
-      errors.push('* Description is not correct');
+    } else if (!pattDesc.test(descContact.value)) {
+      errors.push("* Description is not correct");
       addError(mailBox);
-    }
-    else
-    {
+    } else {
       rmError(descContact);
     }
-    
+
     console.log(errors.length);
-    if(errors.length != 0 )
-    {
+    if (errors.length != 0) {
       let errorVal = "<ul id='errorList'>";
-      for(let i = 0; i < errors.length;i++)
-      {
-        errorVal += "<li><p>" + errors[i] + "</p></li>"
+      for (let i = 0; i < errors.length; i++) {
+        errorVal += "<li><p>" + errors[i] + "</p></li>";
       }
       errorVal += "</ul>";
-      document.querySelector('#error').innerHTML = errorVal;
+      document.querySelector("#error").innerHTML = errorVal;
+    } else {
+      document.querySelector("#error").innerHTML = "";
     }
-    else
-    {
-      document.querySelector('#error').innerHTML = "";
-    }
-   
   });
   // SLIDER
   let product = document.getElementsByClassName("product");
@@ -184,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "</p><p> Cena:" +
         json.products[current].cena +
         "</p>";
+
       detalis.innerHTML = detalisElement;
       photo.setAttribute("data-current", current);
     }
@@ -245,24 +221,6 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       $("#top").fadeOut(300);
     }
-  }
-
-  // down scroll
-
-  function downScroll() {
-    lethrr = $(this).attr("href");
-    letgoTopp = $(hrr).offset().top;
-    $("html,body").animate({ scrollTop: goTopp }, 2000);
-  }
-
-  // menu element scroll
-
-  function elementScroll(e) {
-    letp = $(this).attr("href");
-    lettops = $(p).offset().top;
-    $("body,html")
-      .stop()
-      .animate({ scrollTop: tops }, 2000);
   }
   // close slider
   let cls = document.getElementsByClassName("close");
