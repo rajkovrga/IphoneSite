@@ -4,56 +4,56 @@
       "model": "Apple iPhone XS Max",
       "color": "pink",
       "photo": "ipxsmax.png",
-      "cena": "1259€"
+      "price": "1259€"
     },
 
     {
       "model": "Apple iPhone XS",
       "color": "pink",
       "photo": "ipxs.png",
-      "cena": "1100€"
+      "price": "1100€"
     },
 
     {
       "model": "Apple iPhone X",
-      "color": "bela",
+      "color": "white",
       "photo": "ipx.png",
-      "cena": "800€"
+      "price": "800€"
     },
 
     {
       "model": "Apple iPhone 8plus",
-      "color": "crna",
+      "color": "black",
       "photo": "ip8plus.png",
-      "cena": "698€"
+      "price": "698€"
     },
 
     {
       "model": "Apple iPhone 8",
-      "color": "bela",
+      "color": "white",
       "photo": "ip8.png",
-      "cena": "700€"
+      "price": "700€"
     },
 
     {
       "model": "Apple iPhone 7 plus",
       "color": "pink",
       "photo": "ip7plus.png",
-      "cena": "640€"
+      "price": "640€"
     },
 
     {
       "model": "Apple iPhone 7",
-      "color": "crna",
+      "color": "black",
       "photo": "ip7.png",
-      "cena": "580€"
+      "price": "580€"
     },
 
     {
       "model": "Apple iPhone 6s plus",
-      "color": "bela",
+      "color": "white",
       "photo": "ip6splus.png",
-      "cena": "500€"
+      "price": "500€"
     }
   ]
 }

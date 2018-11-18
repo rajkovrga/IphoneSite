@@ -154,10 +154,10 @@ document.addEventListener("DOMContentLoaded", function() {
       detalisElement =
         "<p> Model:" +
         json.products[current].model +
-        "</p><p> color:" +
+        "</p><p> Color:" +
         json.products[current].color +
-        "</p><p> Cena:" +
-        json.products[current].cena +
+        "</p><p> Price:" +
+        json.products[current].Price +
         "</p>";
 
       detalis.innerHTML = detalisElement;
