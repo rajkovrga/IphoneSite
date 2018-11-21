@@ -5,18 +5,20 @@ document.addEventListener("DOMContentLoaded", function() {
   let itemClick = document.getElementsByClassName("item");
   let items = document.getElementById("items");
   barButton[0].addEventListener("click", menuButton);
-  for (let i = 0; i < itemClick.length; i++) {
-    letbody = document.getElementsByTagName("body");
+  for (var i = 0; i < itemClick.length; i++) {
+    let body = document.getElementsByTagName("body");
     itemClick[i].addEventListener("click", function() {
       if (body[0].scrollWidth < 670) {
-        if (items.classList.contains("d-none")) {
-          items.classList.add("d-flex");
-          items.classList.remove("d-none");
-        } else {
+        if (items.classList.contains("d-flex")) {
+          
           items.classList.add("d-none");
-          items.classList.remove("d-flex");
+          items.classList.remove("d-flex");}
+          else {
+           items.classList.add("d-flex");
+           items.classList.remove("d-none");
+         }
         }
-      }
+    
     });
   }
   // // top button
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // contact REGEX
 
-  let pattEmail = /^[A-Za-z]([a-zA-Z\.\-]{1,})@([a-z]+[.]){1,}([a-z]{2,3}){1}$/;
+  let pattEmail = /^[A-Za-z]([a-z.A-Z-\d]{1,})@([a-z]+[.]){1,}([a-z]{2,3}){1}$/;
   let pattTitle = /^[\w\s]{5,25}$/;
   let pattDesc = /^[\w\s]{20,550}$/;
   function addError(variable) {
@@ -76,8 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       rmError(descContact);
     }
-
-    console.log(errors.length);
     if (errors.length != 0) {
       let errorVal = "<ul id='errorList'>";
       for (let i = 0; i < errors.length; i++) {
@@ -90,30 +90,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   // SLIDER
-  let product = document.getElementsByClassName("product");
+  let product = document.getElementsByClassName("product1");
   $.getJSON("function/products.json", function(json) {
     let articles = "";
-    for (var i = 0; i < json.products.length; i++) {
+    for (var i = 0; i < 8; i++) {
       putIn();
     }
 
     function putIn() {
       if (i >= 4) {
         articles +=
-          '<div class="product productmore extend-none"><img src="img/' +
+          '<div class="product1 productmore"><img src="img/' +
           json.products[i].photo +
           "\"alt='" +
           json.products[i].model +
-          "'>   <div class='naziv'><p>" +
+          "'>   <div class='productDet'><p>" +
           json.products[i].model +
           "</p></div></div> ";
       } else {
         articles +=
-          '<div class="product"><img src="img/' +
+          '<div class="product product1"><img src="img/' +
           json.products[i].photo +
           "\"alt='" +
           json.products[i].model +
-          "'> <div class='naziv'<p>" +
+          "'> <div class='productDet'<p>" +
           json.products[i].model +
           "</p></div></div> ";
       }
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "</p><p> Color:" +
         json.products[current].color +
         "</p><p> Price:" +
-        json.products[current].Price +
+        json.products[current].price +
         "</p>";
 
       detalis.innerHTML = detalisElement;
@@ -182,19 +182,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  let extend = document.getElementsByClassName("button-more");
-  let br = 0;
-  extend[0].addEventListener("click", function() {
-    br += 1;
-
-    for (let i = 4; i < product.length; i++) {
-      if (br % 2 == 1) {
-        product[i].classList.remove("extend-none");
-      } else {
-        product[i].classList.add("extend-none");
-      }
-    }
-  });
+$('.button-more').click(function()
+{
+  $('.productmore').slideToggle(1000);
+});
   // FUNCTIONS
   // menu button
 
@@ -235,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // TYPED
 
-  lettyped = new Typed("#welcome", {
+  let typed = new Typed("#welcome", {
     strings: ["Welcome :)"],
     cursorChar: "",
     typeSpeed: 300
