@@ -6,7 +6,14 @@
   box-sizing: border-box;
   max-width: 100%;
 }
-
+.flex-slider
+{
+  display: flex !important;
+}
+.none-slider
+{
+display: none !important;
+}
 #moreID {
   position: fixed;
   top: 0px;

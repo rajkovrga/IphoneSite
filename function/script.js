@@ -21,6 +21,24 @@ document.addEventListener("DOMContentLoaded", function() {
     
     });
   }
+  // dynamic menu
+  let menu = document.querySelector('#items');
+
+  let hrefValue = ['About','Products','Service','Contact','Author'];
+  let menuClass = ['item','item2', ""];
+  let menuItems = "";
+  let classBr = 2;
+for(let i = 0; i < hrefValue.length;i++)
+{
+  if(i != 1 || i != 2)
+  {
+    classBr = 1;
+  }
+    menuItems += "<li class="+ menuClass[0] +" "+menuClass[classBr] +"><a href=#"+ hrefValue[i].toLowerCase() +">"+ hrefValue[i] +"</a></li>";
+  classBr = 2;
+
+}
+menu.innerHTML += menuItems;
   // // top button
   $(window).scroll(fadeTop);
   $("#top").click(buttonTop);
@@ -129,7 +147,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let detalisElement = "";
     for (let i = 0; i < product.length; i++) {
       product[i].addEventListener("click", function() {
-        slider.style.display = "flex";
+        if(slider.classList.contains('none-slider'))
+        {
+          slider.classList.remove('none-slider');
+          slider.classList.add('flex-slider');
+        }
+        else
+        {
+          slider.classList.add('flex-slider');
+        }
+       
 
         slide(i - 1, "next");
       });
@@ -217,9 +244,8 @@ $('.button-more').click(function()
   let cls = document.getElementsByClassName("close");
   for (let i = 0; i < cls.length; i++) {
     cls[i].addEventListener("click", function() {
-      if (slider.style.display == "flex") {
-        slider.style.display = "none";
-        c = 0;
+      if (slider.classList.contains('flex-slider')) {
+        slider.classList.add('none-slider');
       }
     });
   }
