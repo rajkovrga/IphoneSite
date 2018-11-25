@@ -109,7 +109,7 @@ menu.innerHTML += menuItems;
   });
   // SLIDER
   let product = document.getElementsByClassName("product1");
-  $.getJSON("function/products.json", function(json) {
+  $.getJSON("/function/products.json", function(json) {
     let articles = "";
     for (var i = 0; i < 8; i++) {
       putIn();
