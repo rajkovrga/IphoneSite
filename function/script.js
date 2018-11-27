@@ -2,43 +2,53 @@ document.addEventListener("DOMContentLoaded", function() {
   AOS.init();
   // menu responsive
   let barButton = document.getElementsByClassName("buttonR");
-  let itemClick = document.getElementsByClassName("item");
   let items = document.getElementById("items");
   barButton[0].addEventListener("click", menuButton);
-  for (var i = 0; i < itemClick.length; i++) {
-    let body = document.getElementsByTagName("body");
-    itemClick[i].addEventListener("click", function() {
-      if (body[0].scrollWidth < 670) {
-        if (items.classList.contains("d-flex")) {
-          
-          items.classList.add("d-none");
-          items.classList.remove("d-flex");}
-          else {
-           items.classList.add("d-flex");
-           items.classList.remove("d-none");
-         }
-        }
-    
-    });
-  }
-  // dynamic menu
-  let menu = document.querySelector('#items');
+  let body = document.querySelector("body");
+  items.addEventListener("click", function() {
+   
+    if (body[0].scrollWidth < 670) {
+     
+      if (items.classList.contains("d-flex")) {
+       
+        items.classList.remove("d-flex");
+        items.classList.add("d-none");
+     
+      } else {
+        items.classList.add("d-flex");
+        items.classList.remove("d-none");
+      }
+    }
+  });
+  let menu = document.querySelector("#items");
 
-  let hrefValue = ['About','Products','Service','Contact','Author'];
-  let menuClass = ['item','item2', ""];
+  let hrefValue = ["About", "Products", "Service", "Contact", "Author"];
   let menuItems = "";
-  let classBr = 2;
-for(let i = 0; i < hrefValue.length;i++)
-{
-  if(i != 1 || i != 2)
-  {
-    classBr = 1;
-  }
-    menuItems += "<li class="+ menuClass[0] +" "+menuClass[classBr] +"><a href=#"+ hrefValue[i].toLowerCase() +">"+ hrefValue[i] +"</a></li>";
-  classBr = 2;
+  
+  for (let i = 0; i < hrefValue.length; i++) {
+    if (i == 1 || i == 2) {
+      menuItems +=
+        '<li class="item item2"><a href=' +
+        "#" +
+        hrefValue[i].toLowerCase() +
+        ">" +
+        hrefValue[i] +
+        "</a></li>";
+    } else {
+      menuItems +=
+        '<li class="item"><a href=' +
+        "#" +
+        hrefValue[i].toLowerCase() +
+        ">" +
+        hrefValue[i] +
+        "</a></li>";
+    }
 
-}
-menu.innerHTML += menuItems;
+    pom = "";
+  }
+  menu.innerHTML += menuItems;
+  // dynamic menu
+
   // // top button
   $(window).scroll(fadeTop);
   $("#top").click(buttonTop);
@@ -48,6 +58,8 @@ menu.innerHTML += menuItems;
   $("a").smoothScroll({
     speed: 2000
   });
+  
+
 
   // contact REGEX
 
@@ -147,16 +159,12 @@ menu.innerHTML += menuItems;
     let detalisElement = "";
     for (let i = 0; i < product.length; i++) {
       product[i].addEventListener("click", function() {
-        if(slider.classList.contains('none-slider'))
-        {
-          slider.classList.remove('none-slider');
-          slider.classList.add('flex-slider');
+        if (slider.classList.contains("none-slider")) {
+          slider.classList.remove("none-slider");
+          slider.classList.add("flex-slider");
+        } else {
+          slider.classList.add("flex-slider");
         }
-        else
-        {
-          slider.classList.add('flex-slider');
-        }
-       
 
         slide(i - 1, "next");
       });
@@ -209,10 +217,19 @@ menu.innerHTML += menuItems;
     });
   });
 
-$('.button-more').click(function()
-{
-  $('.productmore').slideToggle(1000);
-});
+  $(".more").click(function() {
+    $(".productmore").slideToggle(1000);  
+    //change text content for button more
+  let pMore = document.querySelector('#p-more');
+  if(pMore.textContent == "MORE")
+  {
+    pMore.textContent = "HIDE";
+  }
+  else
+  {
+    pMore.textContent = "MORE";
+  }
+  });
   // FUNCTIONS
   // menu button
 
@@ -244,8 +261,8 @@ $('.button-more').click(function()
   let cls = document.getElementsByClassName("close");
   for (let i = 0; i < cls.length; i++) {
     cls[i].addEventListener("click", function() {
-      if (slider.classList.contains('flex-slider')) {
-        slider.classList.add('none-slider');
+      if (slider.classList.contains("flex-slider")) {
+        slider.classList.add("none-slider");
       }
     });
   }
