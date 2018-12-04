@@ -14,15 +14,6 @@
 {
 display: none !important;
 }
-#moreID {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 30px;
-  height: 30px;
-  background: red;
-  z-index: 200;
-}
 .element {
   width: 100%;
 }
@@ -58,7 +49,6 @@ display: none !important;
 #sliderPhoto {
   width: 325px;
   height: 325px;
-  background: wheat;
   display: flex;
   justify-content: center;
   align-items: center;
