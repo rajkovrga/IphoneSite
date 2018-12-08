@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // TYPED
+  // TYPED 
 
   let typed = new Typed("#welcome", {
     strings: ["Welcome :)"],
