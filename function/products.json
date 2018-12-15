@@ -53,7 +53,100 @@
       "model": "Apple iPhone 6s plus",
       "color": "white",
       "photo": "ip6splus.png",
+      "price": "490€"
+    },  
+    {
+      "model": "Apple iPhone XS Max",
+      "color": "white",
+      "photo": "ipxsmax2.png",
+      "price": "1200€"
+    },
+    {
+      "model": "Apple iPhone XS Max",
+      "color": "black",
+      "photo": "ipxsmax3.png",
+      "price": "1259€"
+    },
+    
+    {
+      "model": "Apple iPhone XS",
+      "color": "white",
+      "photo": "ipxs2.png",
+      "price": "1110€"
+    },
+    {
+      "model": "Apple iPhone XS",
+      "color": "black",
+      "photo": "ipxs3.png",
+      "price": "1100€"
+    },
+    {
+      "model": "Apple iPhone X",
+      "color": "black",
+      "photo": "ipx2.png",
+      "price": "800€"
+    },
+    {
+      "model": "Apple iPhone 8plus",
+      "color": "white",
+      "photo": "ip8plus2.png",
+      "price": "694€"
+    },
+    {
+      "model": "Apple iPhone 8plus",
+      "color": "pink",
+      "photo": "ip8plus3.png",
+      "price": "690€"
+    },
+
+    {
+      "model": "Apple iPhone 8",
+      "color": "black",
+      "photo": "ip82.png",
+      "price": "708€"
+    },
+
+    {
+      "model": "Apple iPhone 7 plus",
+      "color": "black",
+      "photo": "ip7plus2.png",
+      "price": "650€"
+    },
+
+    {
+      "model": "Apple iPhone 7 plus",
+      "color": "white",
+      "photo": "ip7plus3.png",
+      "price": "620€"
+    },
+
+    {
+      "model": "Apple iPhone 7",
+      "color": "white",
+      "photo": "ip72.png",
+      "price": "594€"
+    },
+
+    {
+      "model": "Apple iPhone 7",
+      "color": "pink",
+      "photo": "ip73.png",
+      "price": "585€"
+    },
+
+    {
+      "model": "Apple iPhone 6s plus",
+      "color": "black",
+      "photo": "ip6plus2.png",
+      "price": "500€"
+    },
+
+    {
+      "model": "Apple iPhone 6s plus",
+      "color": "pink",
+      "photo": "ip6splus3.png",
       "price": "500€"
     }
+
   ]
 }

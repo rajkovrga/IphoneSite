@@ -808,8 +808,114 @@ border-color: rgb(97, 97, 97);
 
 /* all products */
 
+.element.allProducts
+{
+  width:100%;
+  min-height: 300px;
+  background: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.element.allProducts #sort
+{
+  width:26%;
+  background: rgb(112, 112, 112);
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:5px 18px;
+}
+.element.allProducts #sort i
+{
+  font-size: 1.3em;
+}
+.element.allProducts #productsAllSec
+{
+  width:74%;
+  background: wheat;
+  min-height: 300px;
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.element.allProducts #productsAllSec .productSec
+{
+width:29%;
+height:300px;
+background: black;
+margin-top:20px;
+}
+.element.allProducts #productsAllSec .productSec .photoProductSec
+{
+  width:100%;
+  color: rgb(14, 13, 13);
+  height: 79%;
+  display: flex;
+  
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.element.allProducts #productsAllSec .productSec .photoProductSec p
+{
+  font-weight: bold;
+  background-color: rgba(185, 185, 185, 0.801);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+  width:60%;
 
+  padding:5px 22px;
+  bottom: 10%;
+}
+.element.allProducts #productsAllSec .productSec .photoProductSec img
+{
+width:100%;
+height: 100%;
+}
+.element.allProducts #productsAllSec .productSec .photoInfoSec
+{
+width:100%;
+height: 20%;
+background: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-top: 2px solid black;
+}
+.element.allProducts #productsAllSec .productSec .photoInfoSec p
+{
+  width:75%;
+  padding-left:10px;
+  font-size: 1.2em;
+}
+.element.allProducts #productsAllSec .productSec .photoInfoSec .addCart
+{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 5px;
+}
+.element.allProducts #productsAllSec .productSec .photoInfoSec .addCart i:hover
+{
+  background: rgb(202, 198, 198);
+  transition: 0.6s;
+}
+.element.allProducts #productsAllSec .productSec .photoInfoSec .addCart i
+{
+  background: rgb(153, 147, 147);
+  border:1px solid black;
+  border-radius: 10px;
+  padding:8px 10px;
+  font-size: 1.49em;
+}
 /* animation */
 @keyframes item {
   0% {
