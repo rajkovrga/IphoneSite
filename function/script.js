@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $("#photo").animate({ opacity: 1 }, 600);
     $(".detalis").animate({ opacity: 1 }, 600);
   }
-  $(".more").click(function() {
+  $(".more.showMore").click(function() {
     $(".productmore").slideToggle(1000);
     //change text content for button more
     let pMore = document.querySelector("#p-more");
@@ -272,4 +272,3 @@ document.addEventListener("DOMContentLoaded", function() {
     typeSpeed: 300
   });
  });
-// 

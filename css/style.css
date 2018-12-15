@@ -665,6 +665,96 @@ textarea:focus {
   align-items: center;
 }
 
+/* second page  */
+/* add link button for second page*/
+
+.more.all
+{
+  margin-left:6px;
+}
+.more.all a
+{
+color:white;
+}
+
+/*second page content*/
+
+/* menu */
+
+.element.menuSecond
+{
+  width:100%;
+  height:80px;
+  background: black;
+  color:white;
+  padding:0px 2%;
+
+}
+.element.menuSecond ul
+{
+  width: inherit;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.element.menuSecond ul li img
+{
+  width:41px;
+  height: 41px;
+}
+.element.menuSecond ul .back a
+{
+color: white;
+border: 1px solid white;
+padding:9px;
+border-radius: 10px;
+display: flex;
+}
+.element.menuSecond ul .back a .fas
+{
+padding-right: 8px;
+}
+.element.menuSecond ul .back a:hover
+{
+  transition: 0.6s;
+  background: rgb(80, 76, 76);
+}
+.element.menuSecond ul #cart 
+{
+  position: relative;
+  display: flex;
+}
+.element.menuSecond ul #cart p
+{
+  position: absolute;
+  top:-13px;
+  left:-6px;
+  padding:2px 4px;
+  font-size:0.9em;
+  border-radius: 40%;
+  background: rgb(84, 99, 84);
+}
+.element.menuSecond ul #cart .fas
+{
+  font-size:1.8em;
+}
+/* title */
+.element.titleSecond
+{
+width:100%;
+display: flex;
+height: 120px;
+align-items: center;
+text-align: center;
+justify-content: center;
+}
+.element.titleSecond h1
+{
+  background: rgba(109, 104, 104, 0.514);
+  padding:17px 24px;
+}
+
 /* animation */
 @keyframes item {
   0% {
@@ -835,6 +925,14 @@ div
   .element.contact .contact-content .contactForm textarea,#send,input[type='text']
   {
     width:97%;
+  }
+  .element.menuSecond ul .back a p
+  {
+    display: none;
+  }
+  .element.menuSecond ul .back a .fas
+  {
+    padding-right: 2px;
   }
 }
 @media screen and (max-width: 342px) {
