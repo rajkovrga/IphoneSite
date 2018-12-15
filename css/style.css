@@ -443,7 +443,7 @@ flex-direction: column;
   padding:10px 0px;
 }
 
-input[type="text"],
+.contactForm input[type="text"],
 textarea {
   background: rgb(247, 233, 233);
   resize: none;
@@ -454,7 +454,7 @@ textarea {
   cursor: pointer;
   border: 2px solid rgb(95, 94, 94);
 }
-input[type="text"] {
+.contactForm input[type="text"] {
   padding: 10px 9px;
 }
 textarea {
@@ -474,7 +474,7 @@ textarea {
   background: rgb(90, 88, 88);
   transition: 0.8s;
 }
-input[type="text"]:focus,
+.contactForm input[type="text"]:focus,
 textarea:focus {
   border: none;
   outline: none;
@@ -698,8 +698,13 @@ color:white;
   justify-content: space-between;
   align-items: center;
 }
-.element.menuSecond ul li img
+.element.menuSecond ul #logo
 {
+  margin-right:20px;
+}
+.element.menuSecond ul #logo img
+{
+ 
   width:41px;
   height: 41px;
 }
@@ -754,6 +759,56 @@ justify-content: center;
   background: rgba(109, 104, 104, 0.514);
   padding:17px 24px;
 }
+
+/* search */
+
+.element.search
+{
+  width:100%;
+  padding:13px 0px;
+  background: rgb(65, 61, 61);
+ display: flex;
+ justify-content: center;
+}
+.element.search #search
+{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.element.search #search #buttonSearch
+{
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  padding:11px 14px;
+  font-size: 1.3em;
+  border-radius: 00px 10px 10px 0px;
+}
+.element.search #search input[type="text"]
+{
+  width:69%;
+  padding:7px 6px;
+  border-radius: 10px 0px 0px 10px;
+  border-color: black;
+  border-width: 5px;
+  font-size: 0.99em;
+}
+.element.search #search input[type="text"]:focus
+{
+outline: none;
+border: none;
+border-style: solid;
+border-width: 5px;
+border-color: rgb(97, 97, 97);
+}
+
+/* all products */
+
+
 
 /* animation */
 @keyframes item {
