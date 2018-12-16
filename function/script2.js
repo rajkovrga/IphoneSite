@@ -1,49 +1,69 @@
 document.addEventListener("DOMContentLoaded", function() {
   $(".element.allProducts #sort").hide();
 
-  $(".element.search i").click(function() {
+  $(".element.search .fa-sliders-h").click(function() {
     $(".element.allProducts #sort").toggle();
   });
   $(".element.allProducts #sort i").click(function() {
     $(".element.allProducts #sort").hide();
   });
 
+  //search box
+
+  $('#searchText').hide();
+  $('#buttonSearch').click(function()
+  {
+    $('#searchText').toggle();
+  });
+
+  
+
   let ajaxLoad = new XMLHttpRequest();
 
   ajaxLoad.open("GET", "/function/products.json");
   ajaxLoad.addEventListener("load", function() {
     let phone = JSON.parse(ajaxLoad.responseText);
-    var allProducts = "";
-    for (let i = 0; i < phone.products.length; i++) {
-      allProducts += ` <div class="productSec">
-        <div class="photoProductSec" data-position=${i}>
-                <img src="img/${phone.products[i].photo}" alt="">
-                <p>${phone.products[i].price}</p>
-            </div>
-            <div class="photoInfoSec"><p>${
-              phone.products[i].model
-            }</p><div class="addCart"> <i class="fas fa-shopping-cart"></i></div></div> 
-    </div>`;
+    allProductsShow();
+    function allProductsShow()
+    {
+      var allProducts = "";
+      for (let i = 0; i < phone.products.length; i++) {
+        allProducts += ` <div class="productSec">
+          <div class="photoProductSec" data-position=${i}>
+                  <img src="img/${phone.products[i].photo}" alt="">
+                  <p>${phone.products[i].price}</p>
+              </div>
+              <div class="photoInfoSec"><p>${
+                phone.products[i].model
+              }</p><div class="addCart"> <i class="fas fa-shopping-cart"></i></div></div> 
+      </div>`;
+      }
+  
+      document.getElementById("productsAllSec").innerHTML += allProducts;
+      allProducts = "";
     }
-
-    document.getElementById("productsAllSec").innerHTML += allProducts;
-    allProducts = "";
+    
     
     /** search */
-    let checkboxes = document.getElementsByClassName("checkboxC");
-    let color = [];
-    allProducts = "";
-    $(".checkboxC").change(function() {
-      color = [];
+    let checkboxes = document.getElementsByClassName("checkbox");
+    let sortCheck = [];
+    
+    $(".checkbox").change(function() {
+      sortCheck = [];
       document.getElementById("productsAllSec").innerHTML = "";
       for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
-          color.push(checkboxes[i].name);
+          sortCheck.push(checkboxes[i].name);
         }
       }
-      for (var j = 0; j < color.length; j++) {
+      if(sortCheck.length == 0)
+      {
+        allProductsShow();
+      }
+      allProducts = "";
+      for (var j = 0; j < sortCheck.length; j++) {
         for (var i = 0; i < phone.products.length; i++) {
-          if (phone.products[i].color == color[j]) {
+          if (phone.products[i].color == sortCheck[j] || phone.products[i].status == sortCheck[j] ) {
             allProducts += ` <div class="productSec">
               <div class="photoProductSec" data-position=${i}>
                       <img src="img/${phone.products[i].photo}" alt="">

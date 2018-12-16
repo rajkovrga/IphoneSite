@@ -7,6 +7,7 @@
       "camera": "12MP",
       "resolution":"1242x2688 pixels",
       "ram":"4GB",
+      "status":"s",
       "price": "1259€"
     },
 
@@ -17,6 +18,7 @@
       "camera": "12MP",
       "resolution":"1125x2436 pixels",
       "ram":"4GB",
+      "status":"s",
       "price": "1100€"
     },
 
@@ -27,6 +29,7 @@
       "camera": "12MP",
       "resolution":"1125x2436 pixels",
       "ram":"3GB",
+      "status":"classic",
       "price": "800€"
     },
 
@@ -37,6 +40,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
+      "status":"plus",
       "price": "698€"
     },
 
@@ -47,6 +51,7 @@
       "camera": "12MP",
       "resolution":"750x1334 pixels",
       "ram":"2GB",
+      "status":"classic",
       "price": "700€"
     },
 
@@ -57,6 +62,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
+      "status":"plus",
       "price": "640€"
     },
 
@@ -67,6 +73,7 @@
       "camera": "12MP",
       "resolution":"750x1334 pixels",
       "ram":"2GB",
+      "status":"classic",
       "price": "580€"
     },
 
@@ -77,6 +84,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"2GB",
+      "status":"plus",
       "price": "490€"
     },  
     {
@@ -86,6 +94,7 @@
       "camera": "12MP",
       "resolution":"1242x2688 pixels",
       "ram":"4GB",
+      "status":"s",
       "price": "1200€"
     },
     {
@@ -95,6 +104,7 @@
       "camera": "12MP",
       "resolution":"1242x2688 pixels",
       "ram":"4GB",
+      "status":"s",
       "price": "1259€"
     },
     
@@ -105,6 +115,7 @@
       "camera": "12MP",
       "resolution":"1125x2436 pixels",
       "ram":"4GB",
+      "status":"s",
       "price": "1110€"
     },
     {
@@ -114,6 +125,7 @@
       "camera": "12MP",
       "resolution":"1125x2436 pixels",
       "ram":"4GB",
+      "status":"s",
       "price": "1100€"
     },
     {
@@ -123,6 +135,7 @@
       "camera": "12MP",
       "resolution":"1125x2436 pixels",
       "ram":"3GB",
+      "status":"classic",
       "price": "800€"
     },
     {
@@ -132,6 +145,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
+      "status":"plus",
       "price": "694€"
     },
     {
@@ -141,6 +155,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
+      "status":"plus",
       "price": "690€"
     },
 
@@ -151,6 +166,7 @@
       "camera": "12MP",
       "resolution":"750x1334 pixels",
       "ram":"2GB",
+      "status":"classic",
       "price": "708€"
     },
 
@@ -161,6 +177,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
+      "status":"plus",
       "price": "650€"
     },
 
@@ -171,6 +188,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
+      "status":"plus",
       "price": "620€"
     },
 
@@ -181,6 +199,7 @@
       "camera": "12MP",
       "resolution":"750x1334 pixels",
       "ram":"2GB",
+      "status":"classic",
       "price": "594€"
     },
 
@@ -191,6 +210,7 @@
       "camera": "12MP",
       "resolution":"750x1334 pixels",
       "ram":"2GB",
+      "status":"classic",
       "price": "585€"
     },
 
@@ -201,6 +221,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"2GB",
+      "status":"s",
       "price": "500€"
     },
 
@@ -211,6 +232,7 @@
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"2GB",
+      "status":"s",
       "price": "500€"
     }
 
