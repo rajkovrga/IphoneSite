@@ -33,39 +33,44 @@
     </div>
     <div class="element titleSecond"><h1>All products</h1></div>
     <div class="element search">
-        <div id="search"><input type="text" name="search" id="searchText"><div id="buttonSearch"><i class="fa fa-search" aria-hidden="true"></i></div></div> 
+            <i class="fas fa-sliders-h"></i>
+        <div id="search">    <input type="text" name="search" id="searchText"><div id="buttonSearch"><i class="fa fa-search" aria-hidden="true"></i></div></div> 
 
     </div>
     <div class="element allProducts">
 
         <div id="sort">
-            <h2>Filters</h2><i class="fas fa-sliders-h"></i>
+           <div class="titleSort"><h2>Filters</h2><i class="fa fa-times" aria-hidden="true"></i></div> 
+           <div class="sortFilters">
+               <div class="filter">
+                   <h3>Color</h3>
+                        <input type="checkbox" name="white" class="checkboxC" id=""><span>White</span><br />
+                        <input type="checkbox" name="pink" class="checkboxC" id=""><span>Pink</span><br />
+                        <input type="checkbox" name="black"  class="checkboxC" id=""><span>Black</span><br />
+               </div>
+               <div class="filter">
+                   <h3>Status</h3>
+                   <input type="checkbox" name="" class="checkbox" id=""><span>S</span> <br />
+                   <input type="checkbox" name="" class="checkbox" id=""><span>Plus</span> <br />
+                   <input type="checkbox" name="" class="checkbox" id=""><span>Classic</span> <br />
+               </div>
+               <div class="filter">
+                   <h3></h3>
+               </div>
+               <div class="filter">
+                   <h3></h3>
+               </div>
+           </div>
+        </div>
+        <div id="productAllInfo">
         </div>
         <div id="productsAllSec">
-                <div class="productSec">
-                        <div class="photoProductSec">
-                                <img src="img/ipxs.png" alt="">
-                                <p>500E</p>
-                            </div>
-                            <div class="photoInfoSec"><p>Apple iPhone XS</p><div class="addCart"> <i class="fas fa-shopping-cart"></i></div></div> 
-                    </div>
-            <div class="productSec">
-                    <div class="photoProductSec">
-                            <img src="img/ipxs.png" alt="">
-                            <p>500E</p>
-                        </div>
-                        <div class="photoInfoSec"><p>Apple iPhone XS</p><div class="addCart"> <i class="fas fa-shopping-cart"></i></div></div> 
-                </div>
-                <div class="productSec">
-                        <div class="photoProductSec">
-                                <img src="img/ipxs.png" alt="">
-                                <p>500E</p>
-                            </div>
-                            <div class="photoInfoSec"><p>Apple iPhone XS</p><div class="addCart"> <i class="fas fa-shopping-cart"></i></div></div> 
-                    </div>
+              
         </div>
-
+     
     </div>
+    
+    <script src="/function/jquery.min.js"></script>
         <script src="function/script2.js"></script>
       </body>
 </html>

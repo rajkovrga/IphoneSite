@@ -4,6 +4,9 @@
       "model": "Apple iPhone XS Max",
       "color": "pink",
       "photo": "ipxsmax.png",
+      "camera": "12MP",
+      "resolution":"1242x2688 pixels",
+      "ram":"4GB",
       "price": "1259€"
     },
 
@@ -11,6 +14,9 @@
       "model": "Apple iPhone XS",
       "color": "pink",
       "photo": "ipxs.png",
+      "camera": "12MP",
+      "resolution":"1125x2436 pixels",
+      "ram":"4GB",
       "price": "1100€"
     },
 
@@ -18,6 +24,9 @@
       "model": "Apple iPhone X",
       "color": "white",
       "photo": "ipx.png",
+      "camera": "12MP",
+      "resolution":"1125x2436 pixels",
+      "ram":"3GB",
       "price": "800€"
     },
 
@@ -25,6 +34,9 @@
       "model": "Apple iPhone 8plus",
       "color": "black",
       "photo": "ip8plus.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"3GB",
       "price": "698€"
     },
 
@@ -32,6 +44,9 @@
       "model": "Apple iPhone 8",
       "color": "white",
       "photo": "ip8.png",
+      "camera": "12MP",
+      "resolution":"750x1334 pixels",
+      "ram":"2GB",
       "price": "700€"
     },
 
@@ -39,6 +54,9 @@
       "model": "Apple iPhone 7 plus",
       "color": "pink",
       "photo": "ip7plus.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"3GB",
       "price": "640€"
     },
 
@@ -46,6 +64,9 @@
       "model": "Apple iPhone 7",
       "color": "black",
       "photo": "ip7.png",
+      "camera": "12MP",
+      "resolution":"750x1334 pixels",
+      "ram":"2GB",
       "price": "580€"
     },
 
@@ -53,18 +74,27 @@
       "model": "Apple iPhone 6s plus",
       "color": "white",
       "photo": "ip6splus.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"2GB",
       "price": "490€"
     },  
     {
       "model": "Apple iPhone XS Max",
       "color": "white",
       "photo": "ipxsmax2.png",
+      "camera": "12MP",
+      "resolution":"1242x2688 pixels",
+      "ram":"4GB",
       "price": "1200€"
     },
     {
       "model": "Apple iPhone XS Max",
       "color": "black",
       "photo": "ipxsmax3.png",
+      "camera": "12MP",
+      "resolution":"1242x2688 pixels",
+      "ram":"4GB",
       "price": "1259€"
     },
     
@@ -72,30 +102,45 @@
       "model": "Apple iPhone XS",
       "color": "white",
       "photo": "ipxs2.png",
+      "camera": "12MP",
+      "resolution":"1125x2436 pixels",
+      "ram":"4GB",
       "price": "1110€"
     },
     {
       "model": "Apple iPhone XS",
       "color": "black",
       "photo": "ipxs3.png",
+      "camera": "12MP",
+      "resolution":"1125x2436 pixels",
+      "ram":"4GB",
       "price": "1100€"
     },
     {
       "model": "Apple iPhone X",
       "color": "black",
       "photo": "ipx2.png",
+      "camera": "12MP",
+      "resolution":"1125x2436 pixels",
+      "ram":"3GB",
       "price": "800€"
     },
     {
       "model": "Apple iPhone 8plus",
       "color": "white",
       "photo": "ip8plus2.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"3GB",
       "price": "694€"
     },
     {
       "model": "Apple iPhone 8plus",
       "color": "pink",
       "photo": "ip8plus3.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"3GB",
       "price": "690€"
     },
 
@@ -103,6 +148,9 @@
       "model": "Apple iPhone 8",
       "color": "black",
       "photo": "ip82.png",
+      "camera": "12MP",
+      "resolution":"750x1334 pixels",
+      "ram":"2GB",
       "price": "708€"
     },
 
@@ -110,6 +158,9 @@
       "model": "Apple iPhone 7 plus",
       "color": "black",
       "photo": "ip7plus2.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"3GB",
       "price": "650€"
     },
 
@@ -117,6 +168,9 @@
       "model": "Apple iPhone 7 plus",
       "color": "white",
       "photo": "ip7plus3.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"3GB",
       "price": "620€"
     },
 
@@ -124,6 +178,9 @@
       "model": "Apple iPhone 7",
       "color": "white",
       "photo": "ip72.png",
+      "camera": "12MP",
+      "resolution":"750x1334 pixels",
+      "ram":"2GB",
       "price": "594€"
     },
 
@@ -131,6 +188,9 @@
       "model": "Apple iPhone 7",
       "color": "pink",
       "photo": "ip73.png",
+      "camera": "12MP",
+      "resolution":"750x1334 pixels",
+      "ram":"2GB",
       "price": "585€"
     },
 
@@ -138,6 +198,9 @@
       "model": "Apple iPhone 6s plus",
       "color": "black",
       "photo": "ip6plus2.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"2GB",
       "price": "500€"
     },
 
@@ -145,6 +208,9 @@
       "model": "Apple iPhone 6s plus",
       "color": "pink",
       "photo": "ip6splus3.png",
+      "camera": "12MP",
+      "resolution":"1080x1920 pixels",
+      "ram":"2GB",
       "price": "500€"
     }
 

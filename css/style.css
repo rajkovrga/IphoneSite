@@ -768,14 +768,18 @@ justify-content: center;
   padding:13px 0px;
   background: rgb(65, 61, 61);
  display: flex;
- justify-content: center;
+ justify-content: space-between;
+
+ align-items: center;
 }
 .element.search #search
 {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  width: 70%;
+  justify-content:flex-end;
   align-items: center;
+  padding-right:10px;
+
 }
 .element.search #search #buttonSearch
 {
@@ -787,6 +791,11 @@ justify-content: center;
   padding:11px 14px;
   font-size: 1.3em;
   border-radius: 00px 10px 10px 0px;
+}
+.element.search .fa-sliders-h
+{
+  padding-left: 10px;
+font-size:1.6em;
 }
 .element.search #search input[type="text"]
 {
@@ -811,21 +820,36 @@ border-color: rgb(97, 97, 97);
 .element.allProducts
 {
   width:100%;
-  min-height: 300px;
+  min-height: 0px;
   background: blueviolet;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
+
 }
 
 .element.allProducts #sort
 {
-  width:26%;
+  width:400px;
   background: rgb(112, 112, 112);
   font-size: 1.2em;
   display: flex;
+  position: absolute;
+  z-index: 10;
+  justify-content: space-between;
+  
+  flex-direction: column;
+
+
+}
+.element.allProducts #sort .titleSort
+{
+  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid  black;
   padding:5px 18px;
 }
 .element.allProducts #sort i
@@ -834,9 +858,10 @@ border-color: rgb(97, 97, 97);
 }
 .element.allProducts #productsAllSec
 {
-  width:74%;
-  background: wheat;
+  width:100%;
+  background: url('../img/products.png');
   min-height: 300px;
+  background-repeat: repeat;
   display: flex;
   
   flex-wrap: wrap;
@@ -844,10 +869,18 @@ border-color: rgb(97, 97, 97);
 }
 .element.allProducts #productsAllSec .productSec
 {
-width:29%;
-height:300px;
+width:27%;
+
+height:328px;
 background: black;
 margin-top:20px;
+}
+@media screen and (min-width:1000px)
+{
+  .element.allProducts #productsAllSec .productSec
+  {
+    width:350px;
+  }
 }
 .element.allProducts #productsAllSec .productSec .photoProductSec
 {
@@ -916,6 +949,69 @@ border-top: 2px solid black;
   padding:8px 10px;
   font-size: 1.49em;
 }
+#productAllInfo
+{
+  width:100%;
+  min-height: 0px;
+  background: url('../img/products.png');
+
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#productAllInfo .detalisPhoto
+{
+  width:260px;
+  border:2px solid black;
+  height: 250px;
+}
+#productAllInfo .detalisPhoto img
+{
+  width: 100%;
+  height: 100%;
+}
+#productAllInfo .detalisInfo
+{
+  font-size:1.2em;
+  min-height: 250px;
+  background: rgb(138, 138, 138);
+  padding:4px 10px;
+  padding-bottom: 19px;
+}
+#productAllInfo .detalisInfo h4
+{
+  font-size:1.4em;
+  text-align: center;
+  border-bottom: 2px solid black;
+
+}
+#productAllInfo .detalisInfo p
+{
+  padding:3px 0px;
+}
+#productAllInfo .detalisInfo #price
+{
+  padding-bottom: 24px;
+}
+#productAllInfo .detalisInfo span
+{
+  background: rgb(61, 61, 61);
+  padding:5px 6px;
+  border-radius: 10px;
+  color:rgb(219, 219, 219);
+  border:1px solid black;
+}
+#productAllInfo .detalisInfo label
+{
+  padding:0px 5px;
+}
+#productAllInfo .detalisInfo span:hover
+{
+  background: rgb(110, 107, 107);
+  padding:5px 6px;
+  border-radius: 10px;
+}
 /* animation */
 @keyframes item {
   0% {
@@ -970,6 +1066,13 @@ div
   display: none;
 }
 
+@media screen and (max-width: 838px) {
+  
+  .element.allProducts #productsAllSec .productSec
+  {
+    width:45%;
+  }
+}
 @media screen and (max-width: 738px) {
   .element.about .content .aboutphoto img {
     width: 82%;
@@ -1074,11 +1177,31 @@ div
   }
 }
 @media screen and (max-width: 580px) {
+  #productAllInfo{
+    padding-top: 20px;
+    flex-direction: column;
+  }
   .element.home {
     height: 381px;
   }
 }
-
+@media screen and (max-width: 568px) {
+ 
+  .element.allProducts #productsAllSec .productSec
+  {
+    width:84%;
+  }
+  .element.search #search
+  {
+    width:80%;
+  }
+}
+@media screen and (max-width: 415px) {
+.element.allProducts #sort
+{
+width:86%;
+}
+}
 @media screen and (max-width: 489px) {
   .element.contact .contact-content .contactForm {
     width: 100%;
@@ -1095,6 +1218,12 @@ div
   {
     padding-right: 2px;
   }
+}
+@media screen and (max-width: 390px) {
+  .element.author #authorInfo #authorText {
+    width: 280px;
+  }
+  
 }
 @media screen and (max-width: 342px) {
   .element.author #authorInfo #authorText {
