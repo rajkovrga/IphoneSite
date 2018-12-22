@@ -8,7 +8,7 @@
       "resolution":"1242x2688 pixels",
       "ram":"4GB",
       "status":"s",
-      "price": "1259€"
+      "price": 1259
     },
 
     {
@@ -19,7 +19,7 @@
       "resolution":"1125x2436 pixels",
       "ram":"4GB",
       "status":"s",
-      "price": "1100€"
+      "price": 1100
     },
 
     {
@@ -30,18 +30,18 @@
       "resolution":"1125x2436 pixels",
       "ram":"3GB",
       "status":"classic",
-      "price": "800€"
+      "price": 800
     },
 
     {
-      "model": "Apple iPhone 8plus",
+      "model": "Apple iPhone 8 plus",
       "color": "black",
       "photo": "ip8plus.png",
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
       "status":"plus",
-      "price": "698€"
+      "price": 698
     },
 
     {
@@ -52,7 +52,7 @@
       "resolution":"750x1334 pixels",
       "ram":"2GB",
       "status":"classic",
-      "price": "700€"
+      "price": 700
     },
 
     {
@@ -63,7 +63,7 @@
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
       "status":"plus",
-      "price": "640€"
+      "price": 640
     },
 
     {
@@ -74,7 +74,7 @@
       "resolution":"750x1334 pixels",
       "ram":"2GB",
       "status":"classic",
-      "price": "580€"
+      "price": 580
     },
 
     {
@@ -85,7 +85,7 @@
       "resolution":"1080x1920 pixels",
       "ram":"2GB",
       "status":"plus",
-      "price": "490€"
+      "price": 490
     },  
     {
       "model": "Apple iPhone XS Max",
@@ -95,7 +95,7 @@
       "resolution":"1242x2688 pixels",
       "ram":"4GB",
       "status":"s",
-      "price": "1200€"
+      "price": 1200
     },
     {
       "model": "Apple iPhone XS Max",
@@ -105,7 +105,7 @@
       "resolution":"1242x2688 pixels",
       "ram":"4GB",
       "status":"s",
-      "price": "1259€"
+      "price": 1259
     },
     
     {
@@ -116,7 +116,7 @@
       "resolution":"1125x2436 pixels",
       "ram":"4GB",
       "status":"s",
-      "price": "1110€"
+      "price": 1110
     },
     {
       "model": "Apple iPhone XS",
@@ -126,7 +126,7 @@
       "resolution":"1125x2436 pixels",
       "ram":"4GB",
       "status":"s",
-      "price": "1100€"
+      "price": 1100
     },
     {
       "model": "Apple iPhone X",
@@ -136,27 +136,27 @@
       "resolution":"1125x2436 pixels",
       "ram":"3GB",
       "status":"classic",
-      "price": "800€"
+      "price": 800
     },
     {
-      "model": "Apple iPhone 8plus",
+      "model": "Apple iPhone 8 plus",
       "color": "white",
       "photo": "ip8plus2.png",
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
       "status":"plus",
-      "price": "694€"
+      "price": 694
     },
     {
-      "model": "Apple iPhone 8plus",
+      "model": "Apple iPhone 8 plus",
       "color": "pink",
       "photo": "ip8plus3.png",
       "camera": "12MP",
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
       "status":"plus",
-      "price": "690€"
+      "price": 690
     },
 
     {
@@ -167,7 +167,7 @@
       "resolution":"750x1334 pixels",
       "ram":"2GB",
       "status":"classic",
-      "price": "708€"
+      "price": 708
     },
 
     {
@@ -178,7 +178,7 @@
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
       "status":"plus",
-      "price": "650€"
+      "price": 650
     },
 
     {
@@ -189,7 +189,7 @@
       "resolution":"1080x1920 pixels",
       "ram":"3GB",
       "status":"plus",
-      "price": "620€"
+      "price": 620
     },
 
     {
@@ -200,7 +200,7 @@
       "resolution":"750x1334 pixels",
       "ram":"2GB",
       "status":"classic",
-      "price": "594€"
+      "price": 594
     },
 
     {
@@ -211,7 +211,7 @@
       "resolution":"750x1334 pixels",
       "ram":"2GB",
       "status":"classic",
-      "price": "585€"
+      "price": 585
     },
 
     {
@@ -222,7 +222,7 @@
       "resolution":"1080x1920 pixels",
       "ram":"2GB",
       "status":"s",
-      "price": "500€"
+      "price": 500
     },
 
     {
@@ -233,7 +233,7 @@
       "resolution":"1080x1920 pixels",
       "ram":"2GB",
       "status":"s",
-      "price": "500€"
+      "price": 500
     }
 
   ]

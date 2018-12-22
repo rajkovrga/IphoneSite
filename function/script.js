@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
         json.products[current].color +
         "</p><p> Price:" +
         json.products[current].price +
-        "</p>";
+        "€</p>";
 
       detalis.innerHTML = detalisElement;
       photo.setAttribute("data-current", current);

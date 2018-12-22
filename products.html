@@ -11,7 +11,6 @@
       integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/aos.css" />
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -25,62 +24,47 @@
           >
         </li>
         <li id="logo"><img src="img/logo.png" alt="" /></li>
-        <li id="cart">
+        <li id="cart"><a href="cart.html">
           <i class="fas fa-shopping-cart"></i>
           <p id="numberArticles">0</p>
+          </a>
         </li>
       </ul>
     </div>
+   
     <div class="element titleSecond"><h1>All products</h1></div>
+ 
     <div class="element search">
-            <i class="fas fa-sliders-h"></i>
-        <div id="search">    <input type="text" name="search" id="searchText"><div id="buttonSearch"><i class="fa fa-search" aria-hidden="true"></i></div></div> 
-
-    </div>
+      <i class="fas fa-sliders-h"></i>
+      <div id="search">
+        <input type="text" name="search" id="searchText" />
+        <div id="buttonSearch">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>    
+      </div>
     <div class="element allProducts">
-
-        <div id="sort">
-           <div class="titleSort"><h2>Filters</h2><i class="fa fa-times" aria-hidden="true"></i></div> 
-           <div class="sortFilters">
-              <div class="filter">
-                  <h3>Sort</h3>
-                  <!-- <select>
-                    <option value="1">2</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select> -->
-              </div>
-               <div class="filter">
-                   <h3>Color</h3>
-                        <input type="checkbox" name="white" class="checkbox" id=""><span>White</span><br />
-                        <input type="checkbox" name="pink" class="checkbox" id=""><span>Pink</span><br />
-                        <input type="checkbox" name="black"  class="checkbox" id=""><span>Black</span><br />
-               </div>
-               <div class="filter">
-                   <h3>Status</h3>
-                   <input type="checkbox" name="s" class="checkbox" id=""><span>S</span> <br />
-                   <input type="checkbox" name="plus" class="checkbox" id=""><span>Plus</span> <br />
-                   <input type="checkbox" name="classic" class="checkbox" id=""><span>Classic</span> <br />
-               </div>
-               <div class="filter">
-                   <h3></h3>
-               </div>
-               <div class="filter">
-                   <h3></h3>
-               </div>
-           </div>
+      <div id="sort">
+        <div class="titleSort">
+          <h2>Filters</h2>
+          <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-        <div id="productAllInfo">
+        <div class="sortFilters">
+          <div class="filter sort"></div>
+          <div class="filter colours"></div>
+          <div class="filter status"></div>
         </div>
-        <div id="productsAllSec">
-              
-        </div>
-     
-    </div>
+      </div>
     
+      <div id="productAllInfo">  
+      </div>     
+        <div id="productsAllSec">
+        
+      </div>
+
+    </div>
     <script src="/function/jquery.min.js"></script>
-        <script src="function/script2.js"></script>
-      </body>
+   <script src="function/script2.js"></script> 
+  </body>
 </html>
