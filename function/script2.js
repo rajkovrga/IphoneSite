@@ -94,142 +94,154 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     /** sort */
-    document.querySelector("select").addEventListener("change", function() {
-      for (let i = 0; i < this.children.length; i++) {
-        if (this.children[i].selected) {
-          document.getElementById("productsAllSec").innerHTML = "";
-          switch (this.children[i].value) {
-            case "choose":
-              for (let r = 0; r < productNum.length; r++) {
-                allProductsShow(r);
-              }
-              break;
-            case "a-z":
-              productNum.sort(function(a, b) {
-                if (a.model > b.model) {
-                  return 1;
-                } else if (a.model < b.model) {
-                  return -1;
-                } else {
-                  return 0;
+    sort();
+    function sort() {
+      document.querySelector("select").addEventListener("change", function() {
+        document.getElementsByName("search")[0].value = "";
+        for (let i = 0; i < this.children.length; i++) {
+          if (this.children[i].selected) {
+            document.getElementById("productsAllSec").innerHTML = "";
+            switch (this.children[i].value) {
+              case "choose":
+                for (let r = 0; r < productNum.length; r++) {
+                  allProductsShow(r);
                 }
-              });
-              for (let i = 0; i < productNum.length; i++) {
-                allProductsShow(i);
-              }
-              break;
-            case "z-a":
-              productNum.sort(function(a, b) {
-                if (a.model < b.model) {
-                  return 1;
-                } else if (a.model > b.model) {
-                  return -1;
-                } else {
-                  return 0;
+                break;
+              case "a-z":
+                productNum.sort(function(a, b) {
+                  if (a.model > b.model) {
+                    return 1;
+                  } else if (a.model < b.model) {
+                    return -1;
+                  } else {
+                    return 0;
+                  }
+                });
+                for (let i = 0; i < productNum.length; i++) {
+                  allProductsShow(i);
                 }
-              });
-              for (let i = 0; i < productNum.length; i++) {
-                allProductsShow(i);
-              }
-              break;
-            case "price ascending":
-              productNum.sort(function(a, b) {
-                if (a.price < b.price) {
-                  return 1;
-                } else if (a.price > b.price) {
-                  return -1;
-                } else {
-                  return 0;
+                break;
+              case "z-a":
+                productNum.sort(function(a, b) {
+                  if (a.model < b.model) {
+                    return 1;
+                  } else if (a.model > b.model) {
+                    return -1;
+                  } else {
+                    return 0;
+                  }
+                });
+                for (let i = 0; i < productNum.length; i++) {
+                  allProductsShow(i);
                 }
-              });
-              for (let i = 0; i < productNum.length; i++) {
-                allProductsShow(i);
-              }
-              break;
-            case "price descending":
-              productNum.sort(function(a, b) {
-                if (a.price > b.price) {
-                  return 1;
-                } else if (a.price < b.price) {
-                  return -1;
-                } else {
-                  return 0;
+                break;
+              case "price ascending":
+                productNum.sort(function(a, b) {
+                  if (a.price < b.price) {
+                    return 1;
+                  } else if (a.price > b.price) {
+                    return -1;
+                  } else {
+                    return 0;
+                  }
+                });
+                for (let i = 0; i < productNum.length; i++) {
+                  allProductsShow(i);
                 }
-              });
-              for (let i = 0; i < productNum.length; i++) {
-                allProductsShow(i);
-              }
-              break;
+                break;
+              case "price descending":
+                productNum.sort(function(a, b) {
+                  if (a.price > b.price) {
+                    return 1;
+                  } else if (a.price < b.price) {
+                    return -1;
+                  } else {
+                    return 0;
+                  }
+                });
+                for (let i = 0; i < productNum.length; i++) {
+                  allProductsShow(i);
+                }
+                break;
+            }
           }
         }
-      }
-      detalis();
-    });
-    $("input[type='checkbox']").change(function() {
-      $("#searchText").val("");
-      var checkColor = document.getElementsByClassName("checkboxColor");
-      var checkStatus = document.getElementsByClassName("checkboxStatus");
-      var checkedColor = [];
-      var filterResult = [];
-      var changed = 0;
-      var checkedStatus = [];
-      for (var i = 0; i < checkColor.length; i++) {
-        if (checkColor[i].checked) {
-          checkedColor.push(checkColor[i].name);
+        detalis();
+      });
+    }
+    checkFilter();
+    function checkFilter() {
+      $("input[type='checkbox']").change(function() {
+        document.getElementsByName("search")[0].value = "";
+        var checkColor = document.getElementsByClassName("checkboxColor");
+        var checkStatus = document.getElementsByClassName("checkboxStatus");
+        var checkedColor = [];
+        var filterResult = [];
+        var changed = 0;
+        var checkedStatus = [];
+        document.getElementById("productsAllSec").innerHTML = "";
+        for (let i = 0; i < productNum.length; i++) {
+          allProductsShow(i);
         }
-      }
-      for (var i = 0; i < checkStatus.length; i++) {
-        if (checkStatus[i].checked) {
-          checkedStatus.push(checkStatus[i].name);
+        for (var i = 0; i < checkColor.length; i++) {
+          if (checkColor[i].checked) {
+            checkedColor.push(checkColor[i].name);
+          }
         }
-      }
+        for (var i = 0; i < checkStatus.length; i++) {
+          if (checkStatus[i].checked) {
+            checkedStatus.push(checkStatus[i].name);
+          }
+        }
 
-      var itemProduct = $(".productSec");
-      if (checkedColor.length > 0 && checkedStatus.length > 0) {
-        changed = 1;
-        for (var j = 0; j < itemProduct.length; j++) {
-          for (var i = 0; i < checkedColor.length; i++) {
-            for (var k = 0; k < checkedStatus.length; k++) {
+        var itemProduct = $(".productSec");
+        if (checkedColor.length > 0 && checkedStatus.length > 0) {
+          changed = 1;
+          for (var j = 0; j < itemProduct.length; j++) {
+            for (var i = 0; i < checkedColor.length; i++) {
+              for (var k = 0; k < checkedStatus.length; k++) {
+                var itemDataColor = itemProduct[j].getAttribute("data-color");
+                var itemDataStatus = itemProduct[j].getAttribute("data-status");
+                if (
+                  itemDataColor == checkedColor[i] &&
+                  itemDataStatus == checkedStatus[k]
+                ) {
+                  filterResult.push(j);
+                }
+              }
+            }
+          }
+        } else if (checkedColor.length > 0 || checkedStatus.length > 0) {
+          changed = 1;
+          for (var j = 0; j < itemProduct.length; j++) {
+            for (var i = 0; i < 3; i++) {
               var itemDataColor = itemProduct[j].getAttribute("data-color");
               var itemDataStatus = itemProduct[j].getAttribute("data-status");
+
               if (
-                itemDataColor == checkedColor[i] &&
-                itemDataStatus == checkedStatus[k]
+                itemDataColor == checkedColor[i] ||
+                itemDataStatus == checkedStatus[i]
               ) {
                 filterResult.push(j);
               }
             }
           }
-        }
-      } else if (checkedColor.length > 0 || checkedStatus.length > 0) {
-        changed = 1;
-        for (var j = 0; j < itemProduct.length; j++) {
-          for (var i = 0; i < 3; i++) {
-            var itemDataColor = itemProduct[j].getAttribute("data-color");
-            var itemDataStatus = itemProduct[j].getAttribute("data-status");
-
-            if (
-              itemDataColor == checkedColor[i] ||
-              itemDataStatus == checkedStatus[i]
-            ) {
-              filterResult.push(j);
-            }
+        } else {
+          for (let i = 0; i < productNum.length; i++) {
+            allProductsShow(i);
           }
         }
-      } else {
-        for (let i = 0; i < productNum.length; i++) {
-          allProductsShow(i);
+        if (changed == 1) {
+          for (var i = 0; i < itemProduct.length; i++) {
+            itemProduct[i].style.display = "none";
+          }
+          for (var r = 0; r < filterResult.length; r++) {
+            itemProduct[filterResult[r]].style.display = "block";
+          }
         }
-      }
-      if (changed == 1) {
-        for (var i = 0; i < itemProduct.length; i++) {
-          itemProduct[i].style.display = "none";
-        }
-        for (var r = 0; r < filterResult.length; r++) {
-          itemProduct[filterResult[r]].style.display = "block";
-        }
-      }
-    });
+      });
+    }
+
     detalis();
     function detalis() {
       $("#productAllInfo").hide();
@@ -325,12 +337,34 @@ document.addEventListener("DOMContentLoaded", function() {
         if (c == 0) {
           document.getElementById("productsAllSec").innerHTML = "";
 
-        $('#productsAllSec').html(' <div id="noresult"><p>0 result found</p></div>');         
+          $("#productsAllSec").html(
+            ' <div id="noresult"><p>0 result found</p></div>'
+          );
         }
         detalis();
+        sort();
+        checkFilter();
+
         c = 0;
       });
   });
+
+  $(window).scroll(fadeTop);
+  $("#top").click(buttonTop);
+
+  // top button
+
+  function buttonTop() {
+    $("html,body").animate({ scrollTop: 0 }, 1000);
+  }
+
+  function fadeTop() {
+    if ($(this).scrollTop() > 300) {
+      $("#top").fadeIn(500);
+    } else {
+      $("#top").fadeOut(300);
+    }
+  }
 
   ajaxLoad.send();
 });
