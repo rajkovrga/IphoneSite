@@ -54,10 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
       price = 0;
 
       $("table tr:odd").css("background", "rgb(144, 150, 144)");
-
+      
       $(".fa-trash").click(function() {
         key = $(this).attr("data-key");
         localStorage.removeItem(key);
+      
         $("#numberArticles").text(localStorage.length);
         if(localStorage.length != 0)
         {

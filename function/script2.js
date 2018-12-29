@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
               <span class='addCart'  data-cart='${num}'>Add to Cart <i class="fas fa-shopping-cart"></i></span>  <label>or</label>  <span id="backOnAll">Close</span>
           </div>`;
         $("#productAllInfo").html(productDetalis);
-
+        numberPlus();
         $("html,body").animate(
           {
             scrollTop: 0
@@ -273,28 +273,30 @@ document.addEventListener("DOMContentLoaded", function() {
           700
         );
         // addCart();
-        numberPlus();
+      
         $(".detalisInfo #backOnAll").click(function() {
           $("#productAllInfo").hide();
         });
       });
     }
-
     // add to cart
     function numberPlus() {
-      cartAdd = document.querySelectorAll(".addCart");
+    var  cartAdd = document.querySelectorAll(".addCart");
 
       $(".addCart").click(function() {
-        number = localStorage.length;
+       let number = localStorage.length;
         if (number == 5) {
           alert("5 articles is maximum in cart");
           return;
         }
-
         let productAdd = document
-          .querySelector(".addCart")
-          .getAttribute("data-cart");
-        localStorage.setItem(number, productAdd);
+        .querySelector(".addCart")
+        .getAttribute("data-cart");
+var keyNum = Number(productAdd)+Number(number);
+
+
+     
+        localStorage.setItem(keyNum, productAdd);
         $("#numberArticles").text(localStorage.length);
       });
     }
