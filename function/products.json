@@ -1,240 +1,309 @@
-{
-  "products": [
-    {
+[{
+      "id":1,
       "model": "Apple iPhone XS Max",
       "color": "pink",
-      "photo": "ipxsmax.png",
+      "photo": {
+        "src": "ipxsmax.png",
+        "alt": "photo 1"
+      },
       "camera": "12MP",
-      "resolution":"1242x2688 pixels",
-      "ram":"4GB",
-      "status":"s",
+      "resolution": "1242x2688 pixels",
+      "ram": "4GB",
+      "status": "s",
       "price": 1259
     },
-
     {
+      "id":2,
       "model": "Apple iPhone XS",
       "color": "pink",
-      "photo": "ipxs.png",
+      "photo": {
+        "src": "ipxs.png",
+        "alt":"photo 2"
+      },
       "camera": "12MP",
-      "resolution":"1125x2436 pixels",
-      "ram":"4GB",
-      "status":"s",
+      "resolution": "1125x2436 pixels",
+      "ram": "4GB",
+      "status": "s",
       "price": 1100
     },
-
     {
+      "id":3,
       "model": "Apple iPhone X",
       "color": "white",
-      "photo": "ipx.png",
+      "photo": {
+        "src": "ipx.png",
+        "alt": "photo 3"
+      },
       "camera": "12MP",
-      "resolution":"1125x2436 pixels",
-      "ram":"3GB",
-      "status":"classic",
+      "resolution": "1125x2436 pixels",
+      "ram": "3GB",
+      "status": "classic",
       "price": 800
     },
-
     {
+      "id":4,
       "model": "Apple iPhone 8 plus",
       "color": "black",
-      "photo": "ip8plus.png",
+      "photo": {
+        "src": "ip8plus.png",
+        "alt": "photo 4"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"3GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "3GB",
+      "status": "plus",
       "price": 698
     },
-
     {
+      "id":5,
       "model": "Apple iPhone 8",
       "color": "white",
-      "photo": "ip8.png",
+      "photo": {
+        "src": "ip8.png",
+        "alt": "photo 5"
+      },
       "camera": "12MP",
-      "resolution":"750x1334 pixels",
-      "ram":"2GB",
-      "status":"classic",
+      "resolution": "750x1334 pixels",
+      "ram": "2GB",
+      "status": "classic",
       "price": 700
     },
-
     {
+      "id":6,
       "model": "Apple iPhone 7 plus",
       "color": "pink",
-      "photo": "ip7plus.png",
+      "photo": {
+        "src": "ip7plus.png",
+        "alt": "photo 6"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"3GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "3GB",
+      "status": "plus",
       "price": 640
     },
-
     {
+      "id":7,
       "model": "Apple iPhone 7",
       "color": "black",
-      "photo": "ip7.png",
+      "photo": {
+        "src": "ip7.png",
+        "alt": "photo 7"
+      },
       "camera": "12MP",
-      "resolution":"750x1334 pixels",
-      "ram":"2GB",
-      "status":"classic",
+      "resolution": "750x1334 pixels",
+      "ram": "2GB",
+      "status": "classic",
       "price": 580
     },
-
     {
+      "id":8,
       "model": "Apple iPhone 6s plus",
       "color": "white",
-      "photo": "ip6splus.png",
+      "photo": {
+        "src": "ip6splus.png",
+        "alt": "photo 8"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"2GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "2GB",
+      "status": "plus",
       "price": 490
-    },  
+    },
     {
+      "id":9,
       "model": "Apple iPhone XS Max",
       "color": "white",
-      "photo": "ipxsmax2.png",
+      "photo": {
+        "src": "ipxsmax2.png",
+        "alt": "photo 9"
+      },
       "camera": "12MP",
-      "resolution":"1242x2688 pixels",
-      "ram":"4GB",
-      "status":"s",
+      "resolution": "1242x2688 pixels",
+      "ram": "4GB",
+      "status": "s",
       "price": 1200
     },
     {
+      "id":10,
       "model": "Apple iPhone XS Max",
       "color": "black",
-      "photo": "ipxsmax3.png",
+      "photo": {
+        "src": "ipxsmax3.png",
+        "alt": "photo 10"
+      },
       "camera": "12MP",
-      "resolution":"1242x2688 pixels",
-      "ram":"4GB",
-      "status":"s",
+      "resolution": "1242x2688 pixels",
+      "ram": "4GB",
+      "status": "s",
       "price": 1259
     },
-    
     {
+      "id":11,
       "model": "Apple iPhone XS",
       "color": "white",
-      "photo": "ipxs2.png",
+      "photo": {
+        "src":  "ipxs2.png",
+        "alt": "photo 11"
+      },
       "camera": "12MP",
-      "resolution":"1125x2436 pixels",
-      "ram":"4GB",
-      "status":"s",
+      "resolution": "1125x2436 pixels",
+      "ram": "4GB",
+      "status": "s",
       "price": 1110
     },
     {
+      "id":12,
       "model": "Apple iPhone XS",
       "color": "black",
-      "photo": "ipxs3.png",
+      "photo": {
+        "src": "ipxs3.png",
+        "alt": "photo 12"
+      },
       "camera": "12MP",
-      "resolution":"1125x2436 pixels",
-      "ram":"4GB",
-      "status":"s",
+      "resolution": "1125x2436 pixels",
+      "ram": "4GB",
+      "status": "s",
       "price": 1100
     },
     {
+      "id":13,
       "model": "Apple iPhone X",
       "color": "black",
-      "photo": "ipx2.png",
+      "photo": {
+        "src": "ipx2.png",
+        "alt": "photo 13"
+      },
       "camera": "12MP",
-      "resolution":"1125x2436 pixels",
-      "ram":"3GB",
-      "status":"classic",
+      "resolution": "1125x2436 pixels",
+      "ram": "3GB",
+      "status": "classic",
       "price": 800
     },
     {
+      "id":14,
       "model": "Apple iPhone 8 plus",
       "color": "white",
-      "photo": "ip8plus2.png",
+      "photo": {
+        "src": "ip8plus2.png",
+        "alt": "photo 14"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"3GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "3GB",
+      "status": "plus",
       "price": 694
     },
     {
+      "id":15,
       "model": "Apple iPhone 8 plus",
       "color": "pink",
-      "photo": "ip8plus3.png",
+      "photo": {
+        "src": "ip8plus3.png",
+        "alt": "photo 15"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"3GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "3GB",
+      "status": "plus",
       "price": 690
     },
-
     {
+      "id":16,
       "model": "Apple iPhone 8",
       "color": "black",
-      "photo": "ip82.png",
+      "photo": {
+        "src": "ip82.png",
+        "alt": "photo 16"
+      },
       "camera": "12MP",
-      "resolution":"750x1334 pixels",
-      "ram":"2GB",
-      "status":"classic",
+      "resolution": "750x1334 pixels",
+      "ram": "2GB",
+      "status": "classic",
       "price": 708
     },
-
     {
+      "id":17,
       "model": "Apple iPhone 7 plus",
       "color": "black",
-      "photo": "ip7plus2.png",
+      "photo": {
+        "src": "ip7plus2.png",
+        "alt": "photo 17"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"3GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "3GB",
+      "status": "plus",
       "price": 650
     },
-
     {
+      "id":18,
       "model": "Apple iPhone 7 plus",
       "color": "white",
-      "photo": "ip7plus3.png",
+      "photo": {
+        "src": "ip7plus3.png",
+        "alt": "photo 18"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"3GB",
-      "status":"plus",
+      "resolution": "1080x1920 pixels",
+      "ram": "3GB",
+      "status": "plus",
       "price": 620
     },
-
     {
+      "id":19,
       "model": "Apple iPhone 7",
       "color": "white",
-      "photo": "ip72.png",
+      "photo": {
+        "src": "ip72.png",
+        "alt": "photo 19"
+      },
       "camera": "12MP",
-      "resolution":"750x1334 pixels",
-      "ram":"2GB",
-      "status":"classic",
+      "resolution": "750x1334 pixels",
+      "ram": "2GB",
+      "status": "classic",
       "price": 594
     },
-
     {
+      "id":20,
       "model": "Apple iPhone 7",
       "color": "pink",
-      "photo": "ip73.png",
+      "photo": {
+        "src": "ip73.png",
+        "alt": "photo 20"
+      },
       "camera": "12MP",
-      "resolution":"750x1334 pixels",
-      "ram":"2GB",
-      "status":"classic",
+      "resolution": "750x1334 pixels",
+      "ram": "2GB",
+      "status": "classic",
       "price": 585
     },
-
     {
+      "id":21,
       "model": "Apple iPhone 6s plus",
       "color": "black",
-      "photo": "ip6plus2.png",
+      "photo": {
+        "src": "ip6plus2.png",
+        "alt": "photo 21"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"2GB",
-      "status":"s",
+      "resolution": "1080x1920 pixels",
+      "ram": "2GB",
+      "status": "s",
       "price": 500
     },
-
     {
+      "id":22,
       "model": "Apple iPhone 6s plus",
       "color": "pink",
-      "photo": "ip6splus3.png",
+      "photo": {
+        "src": "ip6splus3.png",
+        "alt": "photo 22"
+      },
       "camera": "12MP",
-      "resolution":"1080x1920 pixels",
-      "ram":"2GB",
-      "status":"s",
+      "resolution": "1080x1920 pixels",
+      "ram": "2GB",
+      "status": "s",
       "price": 500
     }
-
   ]
-}

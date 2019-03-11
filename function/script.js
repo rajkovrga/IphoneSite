@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function putIn() {
-      articles += slideMore(json.products[i].photo, json.products[i].model);
+      articles += slideMore(json[i].photo.src,json[i].photo.alt, json[i].model);
     }
     
     let r = document.querySelector(".articles");
@@ -166,11 +166,11 @@ document.addEventListener("DOMContentLoaded", function() {
       photo.src = product[current].children[0].getAttribute("src");
       detalisElement =
         "<p> Model:" +
-        json.products[current].model +
+        json[current].model +
         "</p><p> Color:" +
-        json.products[current].color +
+        json[current].color +
         "</p><p> Price:" +
-        json.products[current].price +
+        json[current].price +
         "€</p>";
 
       detalis.innerHTML = detalisElement;
@@ -199,13 +199,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // load products
 
-    function slideMore(i1, i2) {
+    function slideMore(src,alt,model) {
       let productReturn = "";
       (i >= 4)
-        ? (productReturn = '<div class="product1 productmore"><img src="img/' + i1 + "\"alt='" +
-        i2 + "'>   <div class='productDet'><p>" + i2 + "</p></div></div> ")
-        : (productReturn = '<div class="product product1"><img src="img/' + i1 + "\"alt='" +
-        i2 + "'> <div class='productDet'<p>" + i2 + "</p></div></div> ");
+        ? (productReturn = '<div class="product1 productmore"><img src="img/' + src + "\"alt='" +
+        alt + "'>   <div class='productDet'><p>" + model + "</p></div></div> ")
+        : (productReturn = '<div class="product product1"><img src="img/' + src + "\"alt='" +
+        alt + "'> <div class='productDet'<p>" + model + "</p></div></div> ");
       return productReturn;
     }
   });
