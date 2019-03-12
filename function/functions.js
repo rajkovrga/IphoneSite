@@ -118,7 +118,6 @@ function all() {
       case "price descending":
         sorting = products.sort((a, b) => a.price - b.price);
         break;
-
     }
     if (sorting != 0) {
       localStorage.setItem("all", JSON.stringify(sorting));
@@ -162,6 +161,11 @@ function all() {
     localStorage.setItem("all", JSON.stringify(colorResult));
   }
   showProducts(JSON.parse(localStorage.getItem("all")));
+  if (JSON.parse(localStorage.getItem("all")).length == 0) {
+    document.getElementById("productsAllSec").innerHTML = ` <div id="noresult">
+    <p>No result</p>
+  </div>`;
+  }
   localStorage.setItem("all", JSON.stringify(JSON.parse(localStorage.getItem("allProducts"))));
   showDetalis()
 }
@@ -201,7 +205,7 @@ function showDetalis() {
       $("#productAllInfo").hide();
     });
     addToCart()
-    countElements(JSON.parse(localStorage.getItem("cart"))) 
+    countElements(JSON.parse(localStorage.getItem("cart")))
 
   })
 }
@@ -216,22 +220,21 @@ function countElements(arr) {
     return num;
   }
   $("#numberArticles").text("0");
-
   return 0;
 }
 function addToCart() {
   document.getElementsByClassName("addCart")[0].addEventListener("click", function () {
-  
-    countElements(JSON.parse(localStorage.getItem("cart"))) 
+
+    countElements(JSON.parse(localStorage.getItem("cart")))
     let id = this.getAttribute("data-cart")
-    
+
     if (countElements(JSON.parse(localStorage.getItem("cart"))) < 5) {
 
       if (JSON.parse(localStorage.getItem("cart")) == null || JSON.parse(localStorage.getItem("cart")).length == 0) {
         let cart = [];
         cart.push({ id: parseInt(id), quantity: 1 })
         localStorage.setItem("cart", JSON.stringify(cart));
-        countElements(JSON.parse(localStorage.getItem("cart"))) 
+        countElements(JSON.parse(localStorage.getItem("cart")))
       }
       else {
         let r = 0;
@@ -240,7 +243,7 @@ function addToCart() {
           if (element.id == id) {
             element.quantity += 1
             localStorage.setItem("cart", JSON.stringify(cartNow));
-            countElements(JSON.parse(localStorage.getItem("cart"))) 
+            countElements(JSON.parse(localStorage.getItem("cart")))
             r = 1;
             return;
           }
@@ -248,7 +251,7 @@ function addToCart() {
         if (r == 0) {
           cartNow.push({ "id": parseInt(id), quantity: 1 })
           localStorage.setItem("cart", JSON.stringify(cartNow));
-          countElements(JSON.parse(localStorage.getItem("cart"))) 
+          countElements(JSON.parse(localStorage.getItem("cart")))
           return;
         }
       }

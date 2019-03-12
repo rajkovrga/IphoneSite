@@ -1,112 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Products</title>
-       <meta
-      name="description"
-      content="This is a store where Apple mobile phone are sold in Belgrade, started working 2011 and you can find your favorite iphone mobile"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="apple, iphone, XS, store, phone" />
-    <meta name="author" content="Rajko Vrga" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="element menuSecond">
-      <ul>
-        <li class="back">
-          <a href="index.html"
-            ><i class="fas fa-arrow-left"></i>
-            <p>Back</p></a
-          >
-        </li>
-        <li id="logo"><img src="img/logo.png" alt="" /></li>
-        <li id="cart"><a href="cart.html">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Products</title>
+  <meta name="description" content="This is a store where Apple mobile phone are sold in Belgrade, started working 2011 and you can find your favorite iphone mobile" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="apple, iphone, XS, store, phone" />
+  <meta name="author" content="Rajko Vrga" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous" />
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="element menuSecond">
+    <ul>
+      <li class="back">
+        <a href="index.html"><i class="fas fa-arrow-left"></i>
+          <p>Back</p>
+        </a>
+      </li>
+      <li id="logo"><img src="img/logo.png" alt="" /></li>
+      <li id="cart"><a href="cart.html">
           <i class="fas fa-shopping-cart"></i>
           <p id="numberArticles">0</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-   
-    <div class="element titleSecond"><h1>All products</h1></div>
- 
-    <div class="element search">
-      <i class="fas fa-sliders-h"></i>
-      <div id="search">
-        <input type="text" name="search" id="searchText" />
-        <div id="buttonSearch">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div>    
-      </div>
-    <div class="element allProducts">
-      <div id="sort">
-        <div class="titleSort">
-          <h2>Filters</h2>
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <div class="sortFilters">
-          <div class="filter sort"></div>
-          <div class="filter colours"></div>
-          <div class="filter status"></div>
-        </div>
-      </div>
-    
-      <div id="productAllInfo">  
-      </div>     
-        <div id="productsAllSec">
-          <div class="productSec" data-position="2" data-status="classic" data-color="white">
-            <div class="photoProductSec">
-                    <img src="img/ipx.png" alt="">
-                    <p>800€</p>
-                </div>
-                <div class="photoInfoSec"><p class="modelName">Apple iPhone X</p></div> 
-        </div>
-      </div>
-    </div>
-
-    <div class="element copy">
-      <div class="social">
-        <a
-          target="blank_"
-          class="fab fa-instagram"
-          href="https://www.instagram.com/?hl=sr"
-        ></a>
-        <a target="blank_" class="fas fa-sitemap" href="sitemap.xml"></a>
-        <a
-          target="blank_"
-          class="fab fa-facebook-f"
-          href="http://www.facebook.com"
-        >
         </a>
-        <a
-          target="blank_"
-          class="fab fa-twitter"
-          href="http://www.twitter.com"
-        ></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="element titleSecond">
+    <h1>All products</h1>
+  </div>
+
+  <div class="element search">
+    <i class="fas fa-sliders-h"></i>
+    <div id="search">
+      <input type="text" name="search" id="searchText" />
+      <div id="buttonSearch">
+        <i class="fa fa-search" aria-hidden="true"></i>
       </div>
-      <div class="Documentation"><a href="documentation.pdf" target="_blank">Documentation</a></div>
-      <div class="copyText"><p>&copy; Copyright</p></div>
     </div>
-    <div id="top">
-      <a href="#" target="_top"> <i class="fa fa-arrow-up"></i></a>
+  </div>
+  </div>
+  <div class="element allProducts">
+    <div id="sort">
+      <div class="titleSort">
+        <h2>Filters</h2>
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <div class="sortFilters">
+        <div class="filter sort"></div>
+        <div class="filter colours"></div>
+        <div class="filter status"></div>
+      </div>
     </div>
 
-    <script src="/function/jquery.min.js"></script>
-    <script src="function/functions.js"></script> 
+    <div id="productAllInfo">
+    </div>
+    <div id="productsAllSec">
+      <div id="noresult">
+        <p>No result</p>
+      </div>
+    </div>
 
-   <script src="function/script3.js"></script> 
-  </body>
+  </div>
+
+  <div class="element copy">
+    <div class="social">
+      <a target="blank_" class="fab fa-instagram" href="https://www.instagram.com/?hl=sr"></a>
+      <a target="blank_" class="fas fa-sitemap" href="sitemap.xml"></a>
+      <a target="blank_" class="fab fa-facebook-f" href="http://www.facebook.com">
+      </a>
+      <a target="blank_" class="fab fa-twitter" href="http://www.twitter.com"></a>
+    </div>
+    <div class="Documentation"><a href="documentation.pdf" target="_blank">Documentation</a></div>
+    <div class="copyText">
+      <p>&copy; Copyright</p>
+    </div>
+  </div>
+  <div id="top">
+    <a href="#" target="_top"> <i class="fa fa-arrow-up"></i></a>
+  </div>
+
+  <script src="function/jquery.min.js"></script>
+  <script src="function/functions.js"></script>
+  <script src="function/script3.js"></script>
+</body>
+
 </html>
