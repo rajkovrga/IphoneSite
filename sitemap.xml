@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>http://mobile111ap.000webhostapp.com/</loc>
+  <loc>https://rajkovrga.github.io/IphoneSite/</loc>
   <priority>0.9</priority>
   <changefreq>weekly</changefreq>
-  <lastmod>2018-12-03</lastmod>
+  <lastmod>2019-03-12</lastmod>
 </url>
 <url>
-  <loc>http://mobile111ap.000webhostapp.com/index.html</loc>
+  <loc>https://rajkovrga.github.io/IphoneSite/index.html</loc>
   <priority>0.9</priority>
   <changefreq>weekly</changefreq>
-  <lastmod>2018-12-03</lastmod>
+  <lastmod>2019-03-12</lastmod>
 </url>
+<url>
+  <loc>https://rajkovrga.github.io/IphoneSite/products.html</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+  <lastmod>2019-03-12</lastmod>
+</url>
+<url>
+  <loc>http://mobile111ap.000webhostapp.com/cart.html</loc>
+  <priority>0.9</priority>
+  <changefreq>weekly</changefreq>
+  <lastmod>2019-03-12</lastmod>
+</url>
+
 </urlset>
