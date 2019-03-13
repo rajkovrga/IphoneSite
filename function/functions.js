@@ -126,7 +126,7 @@ function all() {
 
   let searchBox = document.getElementById("searchText");
   if (searchBox.value.length != 0) {
-    localStorage.setItem("all", JSON.stringify(products.filter(p => p.model.toLowerCase().indexOf(searchBox.value) > -1)));
+    localStorage.setItem("all", JSON.stringify(products.filter(p => p.model.toLowerCase().includes(searchBox.value))));
   }
 
   let filterArrStatus = [];
@@ -139,9 +139,7 @@ function all() {
     }
   }
   if (checkedStatus != 0) {
-    let statusResult = products.filter(function (c) {
-      return filterArrStatus.indexOf(c.status) > -1;
-    });
+    let statusResult = products.filter(c => filterArrStatus.includes(c.status));
     localStorage.setItem("all", JSON.stringify(statusResult));
   }
   products = JSON.parse(localStorage.getItem("all"));
@@ -155,9 +153,7 @@ function all() {
     }
   }
   if (checkedColor != 0) {
-    let colorResult = products.filter(function (cc) {
-      return filterArrColor.indexOf(cc.color) > -1;
-    });
+    let colorResult = products.filter((cc) => filterArrColor.includes(cc.color));
     localStorage.setItem("all", JSON.stringify(colorResult));
   }
   showProducts(JSON.parse(localStorage.getItem("all")));

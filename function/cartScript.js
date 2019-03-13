@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 resultArr.push(parseInt(element.id));
             });
 
-            resultArr = allItems.filter(a => resultArr.indexOf(a.id) > -1);
+            resultArr = allItems.filter(a => resultArr.includes(a.id));
             let price = 0;
             r = `       <table>
          <tr>
@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("cart", JSON.stringify(cartItems));
                 showItems()
             })
-
         }
     }
     function minusQuantity(cartItems) {
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let id = plus[i].parentElement.getAttribute("data-id")
 
                 cartItems.forEach((element, i) => {
-                    if (element.id == id) {
+                    if (cartItems.some(p => p.id == id)) {
                         if (element.quantity > 1) {
                             element.quantity -= 1;
                         }
