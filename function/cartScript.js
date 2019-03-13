@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let num = 0;
         let cartNow = arr
         if (cartNow != null) {
-            cartNow.forEach(element => {
-                num += element.quantity;
-            });
+            cartNow.map(element => num += element.quantity);
             $("#numberArticles").text(num.toString());
             return num;
         }

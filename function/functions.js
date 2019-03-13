@@ -126,7 +126,7 @@ function all() {
 
   let searchBox = document.getElementById("searchText");
   if (searchBox.value.length != 0) {
-    localStorage.setItem("all", JSON.stringify(products.filter(p => p.model.toLowerCase().includes(searchBox.value))));
+    localStorage.setItem("all", JSON.stringify(products.filter((p) => p.model.toLowerCase().includes(searchBox.value))));
   }
 
   let filterArrStatus = [];
@@ -209,9 +209,7 @@ function countElements(arr) {
   let num = 0;
   let cartNow = arr
   if (cartNow != null) {
-    cartNow.forEach(element => {
-      num += element.quantity;
-    });
+    cartNow.map(element => num += element.quantity);
     $("#numberArticles").text(num.toString());
     return num;
   }
