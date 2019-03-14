@@ -89,7 +89,7 @@ function sort() {
 
 function all() {
   let products = JSON.parse(localStorage.getItem("allProducts"));
-  let sorting;
+  let sorting = products;
   if (document.getElementById("sortBox").value != 0) {
     switch (document.getElementById("sortBox").value) {
       case "a-z":
@@ -125,8 +125,9 @@ function all() {
   }
 
   let searchBox = document.getElementById("searchText");
+
   if (searchBox.value.length != 0) {
-    localStorage.setItem("all", JSON.stringify(products.filter((p) => p.model.toLowerCase().includes(searchBox.value))));
+    localStorage.setItem("all", JSON.stringify(sorting.filter((p) => p.model.toLowerCase().includes(searchBox.value))));
   }
 
   let filterArrStatus = [];
