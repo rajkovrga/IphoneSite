@@ -140,7 +140,7 @@ function all() {
     }
   }
   if (checkedStatus != 0) {
-    let statusResult = products.filter(c => filterArrStatus.includes(c.status));
+    let statusResult = sorting.filter(c => filterArrStatus.includes(c.status));
     localStorage.setItem("all", JSON.stringify(statusResult));
   }
   products = JSON.parse(localStorage.getItem("all"));
@@ -154,7 +154,7 @@ function all() {
     }
   }
   if (checkedColor != 0) {
-    let colorResult = products.filter((cc) => filterArrColor.includes(cc.color));
+    let colorResult = sorting.filter((cc) => filterArrColor.includes(cc.color));
     localStorage.setItem("all", JSON.stringify(colorResult));
   }
   showProducts(JSON.parse(localStorage.getItem("all")));
